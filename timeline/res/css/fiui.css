@@ -1,0 +1,823 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    min-height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: Microsoft YaHei, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+}
+
+/*返回顶部按钮部分*/
+
+* html {
+    background-attachment: fixed;
+}
+
+/*解决IE6下滚动抖动的问题*/
+#tbox {
+    width: 54px;
+    height: 54px;
+    float: right;
+    position: fixed;
+    right: 50px;
+    bottom: 15px;
+    _position: absolute;
+    _bottom: auto;
+    _top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+    _margin-bottom: 15px;
+    z-index: 99999;
+}
+
+/*解决IE6下不兼容 position:fixed 的问题*/
+#gotop {
+    width: 54px;
+    height: 54px;
+    border-radius: 27px;
+    display: none;
+    box-shadow: 0px 0px 4px #A0A0A0;
+}
+#gotop:hover{
+    box-shadow: 0px 0px 16px #A0A0A0;
+}
+#gotop {
+    background-position: 0 0px;
+    cursor: pointer;
+}
+
+/*head部分*/
+
+.fiui-nav {
+    position: fixed;
+    padding: 0px 0px;
+    left: 0px;
+    top: -64px;
+    background: #3D988F;
+    width: 100%;
+    height: 64px;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.fiui-nav-main {
+    width: 1008px;
+    margin: 0px auto;
+    padding: 0px 0px;
+}
+
+.fiui-main .divider1 {
+    line-height: 48px;
+    font-size: 16px;
+    font-family: Microsoft YaHei, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+    color: #A0A0A0;
+    margin-left: 24px;
+}
+
+.fiui-main .divider2 {
+    line-height: 48px;
+    font-size: 16px;
+    font-family: Microsoft YaHei, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+    color: #A0A0A0;
+    margin-left: 24px;
+    margin-top: 24px;
+}
+
+.fiui-nav ul {
+    display: block;
+    padding: 0px 0px;
+    height: 64px;
+}
+
+.fiui-nav li {
+    display: inline-block;
+    _display: inline;
+    *display: inline;
+}
+
+.fiui-nav li a {
+    text-decoration: none;
+    list-style-type: none;
+    color: #E0E0E0;
+    font-family: Microsoft YaHei, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.fiui-nav li#active a {
+    color: #FFFFFF;
+}
+.fiui-nav li#active hr {
+    color: #FFFFFF;
+	border: 1px solid #FFFFFF !important;
+	margin-top: -3px;
+	margin-bottom: 0px;
+}
+.fiui-nav li a:hover {
+    color: #FFFFFF;
+}
+
+.fiui-nav-logo {
+    height: 50px;
+    margin: auto 0px;
+}
+
+.fiui-nav-left {
+    float: left;
+    margin-left: 24px;
+    line-height: 64px;
+}
+
+.fiui-nav-right {
+    float: right;
+    margin-left: 24px;
+    margin-right: 24px;
+    line-height: 64px;
+}
+
+.fiui-main {
+    width: 1008px;
+    margin: 64px auto 0px auto;
+    font-family: Microsoft YaHei, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+}
+
+/*download部分*/
+
+.fiui-download-class-container {
+    margin-top: 64px;
+    padding: 0px 0px;
+    display: block;
+}
+
+.fiui-download-class {
+    display: inline-block;
+    _display: inline;
+    *display: inline;
+    list-style-type: none;
+}
+
+.fiui-download-class a {
+    padding-left: 24px;
+    margin-right: 12px;
+    font-family: Microsoft YaHei, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+    text-decoration: none;
+    font-size: 15px;
+    color: #808080;
+    cursor: pointer;
+}
+
+#active a {
+    color: #03A9F4;
+}
+
+.fiui-download-class a:hover {
+    color: #03A9F4;
+    text-decoration: none;
+}
+
+.devices {
+    text-align: left;
+    margin: 0 auto;
+    padding: 0px 0px 0px 16px;
+    clear: both;
+}
+
+.device-item {
+    width: 182px;
+    height: 324px;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 12px;
+    padding: 0;
+    display: inline-block;
+    _display: inline;
+    *display: inline;
+    zoom: 1;
+    overflow: hidden;
+	position: relative;
+}
+
+.device-item .mask {
+    display: none;
+    width: 180px;
+    height: 322px;
+    background: #FAFAFA;
+	z-index: 2;
+	position: absolute;
+}
+
+.device-item .mask img {
+    /*margin-bottom: 10px;*/
+    width: 182px;
+    height: 264px;
+    display: block;
+}
+
+.device-item .mask .device {
+    font-family: Microsoft YaHei, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+    font-size: 13px;
+    color: #000000;
+    margin: 0px 0px;
+}
+
+.device-item .mask .ver {
+    font-family: Microsoft YaHei, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+    font-size: 12px;
+    color: #808080;
+    margin: 0px 0px;
+}
+
+.device-item .back {
+    height: 304px;
+    padding-top: 190px;
+	z-index: 1;
+	position: absolute;
+}
+
+.device-item .back p {
+    text-align: center;
+    width: 182px;
+    color: #808080;
+    font-family: Microsoft YaHei, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+    font-size: 14px;
+    margin: 0px 0px;
+}
+
+.device-item .back .download {
+    text-align: center;
+    width: 180px;
+    height: 48px;
+    cursor: pointer;
+}
+
+.device-item .back .download:hover {
+    background: #f0f0f0;
+}
+
+.device-item .back .download a {
+    text-decoration: none;
+    text-align: center;
+    width: 182px;
+    height: 48px;
+	display: block;
+    color: #0091EA;
+    font-family: Microsoft YaHei, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 48px;
+}
+
+/*footer部分*/
+footer {
+    text-align: center;
+    margin-top: 92px;
+    padding-top: 84px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    background: #444444 repeat-x;
+    width: 100%;
+    min-width: 1008px;
+    height: 260px;
+}
+
+footer .fiui-footer {
+    text-align: center;
+	margin-top: -24px;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer .items {
+    margin: 0px auto;
+    width: 1008px;
+    text-align: center;
+    clear: both;
+    margin-bottom: 50px;
+}
+
+footer .items .item {
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 0;
+    display: inline-block;
+    _display: inline;
+    *display: inline;
+    zoom: 1;
+    text-align: left;
+    clear: both;
+}
+
+footer .items .item p a {
+    font-family: Microsoft YaHei, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+    color: #D0D0D0;
+    cursor: pointer;
+    line-height: 48px;
+    font-size: 18px;
+}
+
+footer .items .item p a:hover {
+    color: #F1F1F1;
+}
+
+footer .items .item p img {
+    width: 48px;
+    height: 48px;
+    margin-right: 8px;
+}
+
+footer .fiui-copyright {
+    width: 400px;
+    margin: 0px auto;
+    font-family: Microsoft YaHei, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+    olor: #CFCFCF;
+    font-size: 16px;
+}
+
+footer .beian {
+    width: 400px;
+    margin: 0px auto;
+    font-family: Microsoft YaHei, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+    color: #CCCCCC;
+    font-size: 14px;
+}
+
+footer .tongji {
+    width: 400px;
+    margin: 0px auto;
+}
+footer .request-info {
+    width: 600px;
+    margin: 0px auto;
+    font-family: Microsoft YaHei, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+    color: #303030;
+    font-size: 11px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    -icab-text-overflow: ellipsis;
+    -khtml-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+}
+
+/*about部分*/
+.team #stage #container li {
+    width: 128px;
+    position: absolute;
+    bottom: 0;
+    list-style-type: none;
+}
+
+.team #stage #container li img {
+    width: 128px;
+    height: 128px;
+    border-radius: 64px;
+    vertical-align: middle;
+}
+
+.team #stage #container li a {
+    margin-top: 12px;
+    display: block;
+    width: 128px;
+    color: #333;
+    text-decoration: none;
+}
+
+.team #stage #container li a:hover {
+    color: #CCCCCC;
+}
+
+.team #stage #container li span {
+    display: block;
+    width: 128px;
+    text-align: center;
+    font-size: 8px;
+}
+
+.team #stage {
+
+    width: 900px;
+    min-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 50px;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -ms-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+    position: relative;
+    margin-bottom: 520px;
+}
+
+.team #stage #container {
+    margin-top: 200px;
+    width: 128px;
+    height: 128px;
+    margin-left: -64px;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    -ms-transition: -ms-transform 1s;
+    transition: transform 1s;
+
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    position: absolute;
+    left: 50%;
+}
+
+.team #stage #container li:nth-child(0) {
+    -webkit-transform: rotateY(0deg) translateZ(300px);
+    -moz-transform: rotateY(0deg) translateZ(300px);
+    -ms-transform: rotateY(0deg) translateZ(300px);
+    -o-transform: rotateY(0deg) translateZ(300px);
+    transform: rotateY(0deg) translateZ(300px);
+}
+
+.team #stage #container li:nth-child(1) {
+    -webkit-transform: rotateY(36deg) translateZ(300px);
+    -moz-transform: rotateY(36deg) translateZ(300px);
+    -ms-transform: rotateY(36deg) translateZ(300px);
+    -o-transform: rotateY(36deg) translateZ(300px);
+    transform: rotateY(36deg) translateZ(300px);
+}
+
+.team #stage #container li:nth-child(2) {
+    -webkit-transform: rotateY(72deg) translateZ(300px);
+    -moz-transform: rotateY(72deg) translateZ(300px);
+    -ms-transform: rotateY(72deg) translateZ(300px);
+    -o-transform: rotateY(72deg) translateZ(300px);
+    transform: rotateY(72deg) translateZ(300px);
+}
+
+.team #stage #container li:nth-child(3) {
+    -webkit-transform: rotateY(108deg) translateZ(300px);
+    -moz-transform: rotateY(108deg) translateZ(300px);
+    -ms-transform: rotateY(108deg) translateZ(300px);
+    -o-transform: rotateY(108deg) translateZ(300px);
+    transform: rotateY(108deg) translateZ(300px);
+}
+
+.team #stage #container li:nth-child(4) {
+    -webkit-transform: rotateY(144deg) translateZ(300px);
+    -moz-transform: rotateY(144deg) translateZ(300px);
+    -ms-transform: rotateY(144deg) translateZ(300px);
+    -o-transform: rotateY(144deg) translateZ(300px);
+    transform: rotateY(144deg) translateZ(300px);
+}
+
+.team #stage #container li:nth-child(5) {
+    -webkit-transform: rotateY(180deg) translateZ(300px);
+    -moz-transform: rotateY(180deg) translateZ(300px);
+    -ms-transform: rotateY(180deg) translateZ(300px);
+    -o-transform: rotateY(180deg) translateZ(300px);
+    transform: rotateY(180deg) translateZ(300px);
+}
+
+.team #stage #container li:nth-child(6) {
+    -webkit-transform: rotateY(216deg) translateZ(300px);
+    -moz-transform: rotateY(216deg) translateZ(300px);
+    -ms-transform: rotateY(216deg) translateZ(300px);
+    -o-transform: rotateY(216deg) translateZ(300px);
+    transform: rotateY(216deg) translateZ(300px);
+}
+
+.team #stage #container li:nth-child(7) {
+    -webkit-transform: rotateY(252deg) translateZ(300px);
+    -moz-transform: rotateY(252deg) translateZ(300px);
+    -ms-transform: rotateY(252deg) translateZ(300px);
+    -o-transform: rotateY(252deg) translateZ(300px);
+    transform: rotateY(252deg) translateZ(300px);
+}
+
+.team #stage #container li:nth-child(8) {
+    -webkit-transform: rotateY(288deg) translateZ(300px);
+    -moz-transform: rotateY(288deg) translateZ(300px);
+    -ms-transform: rotateY(288deg) translateZ(300px);
+    -o-transform: rotateY(288deg) translateZ(300px);
+    transform: rotateY(288deg) translateZ(300px);
+}
+
+.team #stage #container li:nth-child(9) {
+    -webkit-transform: rotateY(324deg) translateZ(300px);
+    -moz-transform: rotateY(324deg) translateZ(300px);
+    -ms-transform: rotateY(324deg) translateZ(300px);
+    -o-transform: rotateY(324deg) translateZ(300px);
+    transform: rotateY(324deg) translateZ(300px);
+}
+
+.team #stage #container li:nth-child(10) {
+    -webkit-transform: rotateY(360deg) translateZ(300px);
+    -moz-transform: rotateY(360deg) translateZ(300px);
+    -ms-transform: rotateY(360deg) translateZ(300px);
+    -o-transform: rotateY(360deg) translateZ(300px);
+    transform: rotateY(360deg) translateZ(300px);
+}
+
+/*contact部分*/
+.contact-tip * {
+    padding: 0;
+    margin: 0;
+    font-family: "微软雅黑";
+}
+
+.contact-tip ul {
+    color: #808080;
+    margin-left: 18px;
+    margin-right: 18px;
+    font-size: 14px;
+}
+
+.contact-tip li {
+    list-style-type: none;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.contact-tip li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #CCCCCC;
+}
+
+.contact-tip li {
+    font-size: 16px;
+    color: #CCCCCC;
+}
+
+.contact-tip li a:hover {
+    color: #DDDDDD;
+}
+
+.contact-tip .main {
+    background: #263238;
+}
+
+/*  index header 部分 */
+.fiui-index-header{
+    text-align: center;
+    margin-top: -100px;
+    width: 100%;
+    min-width: 1008px;
+    top: 0px;
+    z-index: 1000;
+}
+.fiui-index-header #index-head-background{
+    width: 100%;
+}
+.fiui-index-header #index-head-logo{
+    margin-top: -96px;
+}
+
+.fiui-index-header ul {
+    margin-top: -76px;
+    display: block;
+    padding: 0px 0px;
+    height: 64px;
+}
+
+.fiui-index-header li {
+    display: inline-block;
+    _display: inline;
+    *display: inline;
+}
+
+.fiui-index-header li a{
+    color: #A0A0A0;
+    text-decoration: none;
+    font-family: Microsoft YaHei, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+    font-size: 16px;
+}
+.fiui-index-header li a:hover{
+    color: #FFFFFF;
+}
+.fiui-index-header li a.active{
+    color: #FFFFFF;
+}
+
+/* index中间部分 */
+.index-main{
+    margin-top: 42px;
+}
+.index-main .info-img{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-width: 1008px;
+}
+.index-main .index-title-group{
+    text-align:center;
+    margin:0 auto;
+    margin-top: 92px;
+    padding:0;
+    clear:both;
+    width: 100%;
+    min-width: 1008px;
+}
+.index-main .index-title-item{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding:0;
+    display:inline-block;
+    _display:inline;
+    *display:inline;
+    zoom:1;
+    text-align: center;
+    cursor: pointer;
+    filter:alpha(opacity=30);
+    -moz-opacity:0.3;
+    opacity:0.3;
+}
+.index-main .index-content{
+    text-align: center;
+    min-height: 737px;
+    margin-top: 40px;
+}
+.index-main .index-content img{
+    width: 1008px;
+    height: 737px;
+}
+
+/* 时光轴部分 */
+.update-log-content {
+    padding: 50px 0;
+    margin-left: 24px;
+    margin-right: 24px;
+    min-height: 720px
+}
+
+.update-log-content .wrapper {
+    position: relative;
+}
+
+.update-log-content .line-left {
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 34px
+}
+
+.update-log-content .line-right {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 560px;
+    margin-top: 0px;
+}
+
+.update-log-content .main {
+    background: url(../img/line-bg.png) repeat-y 249px 0
+}
+
+.update-log-content .main .title {
+    position: absolute;
+    line-height: 40px;
+    padding-left: 67px;
+    left: 230px;
+    top: 0;
+    color: #58a6fb;
+    font-size: 24px;
+    background: url(../img/clock.png) no-repeat left top
+}
+
+.update-log-content .main .month {
+    position: relative;
+    z-index: 100
+}
+
+.update-log-content .main .month h2 {
+    height: 40px;
+    width: 170px;
+    padding-right: 30px;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: right
+}
+
+.update-log-content .main .month h2 a {
+    color: #58a6fb;
+    text-decoration: none;
+}
+
+.update-log-content .main .month h2 i {
+    display: block;
+    position: relative;
+    height: 0;
+    width: 0;
+    left: 190px;
+    top: -20px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #59a7fb transparent transparent transparent;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    -webkit-transform-origin: 6px 3px;
+    -moz-transform-origin: 6px 3px;
+    -ms-transform-origin: 6px 3px;
+    -o-transform-origin: 6px 3px;
+    transform-origin: 6px 3px
+}
+
+.update-log-content .main .month .list {
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: height 1s cubic-bezier(0.025, 0.025, 0.000, 1.115), opacity 1s;
+    -moz-transition: height 1s cubic-bezier(0.025, 0.025, 0.000, 1.115), opacity 1s;
+    -ms-transition: height 1s cubic-bezier(0.025, 0.025, 0.000, 1.115), opacity 1s;
+    -o-transition: height 1s cubic-bezier(0.025, 0.025, 0.000, 1.115), opacity 1s;
+    transition: height 1s cubic-bezier(0.025, 0.025, 0.000, 1.115), opacity 1s
+}
+
+.update-log-content .main .month .list ul {
+    bottom: 0
+}
+
+.update-log-content .main .month .list ul li {
+    list-style: none;
+    background: url(../img/circle.png) no-repeat 235px 31px;
+    padding: 30px 0;
+    color: #606060;
+    display: table-row-group;
+}
+
+.update-log-content .main .month .list ul li .date, .update-log-content .main .month .list ul li .version {
+    float: left;
+    display: block;
+    clear: left;
+    width: 200px;
+    line-height: 24px;
+    text-align: right;
+	margin-top: -12px;
+	font-size: 13px;
+}
+
+.update-log-content .main .month .list ul li .date {
+    margin-top: 28px;
+    font-size: 12px;
+    line-height: 32px;
+    color: #707070
+}
+
+.update-log-content .main .month .list ul li .intro, .update-log-content .main .month .list ul li .more {
+    float: left;
+    display: block;
+    margin-left: 100px;
+    line-height: 24px;
+}
+
+.update-log-content .main .month .list ul li .intro {
+    font-size: 13px;
+    line-height: 32px;
+    color: #63d029;
+    margin-top: 28px;
+    white-space:nowrap;cursor:pointer;
+}
+.update-log-content .main .month .list ul li .more {
+    font-size: 14px;
+    line-height: 32px;
+    max-width: 620px;
+}
+
+.update-log-content .main .month .list ul li.highlight .date, .update-log-content .main .month .list ul li.highlight .intro {
+    color: #ec6a13
+}
+
+.update-log-content .wrapper:first-child .main .month.close h2 i {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg)
+}
+
+.update-log-content .wrapper:first-child .main .month.close .list {
+    opacity: 0;
+    height: 0 !important
+}
+
+.ie7 .update-log-content .main .month h2 i {
+    left: 40px
+}
