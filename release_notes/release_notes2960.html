@@ -1,0 +1,206 @@
+<h1>Alpha 16: Combat Just. Got. Serious.</h1>
+
+<h2>Here's what's new in this release:</h2>
+
+<h3>Bug Fixes</h3>
+<ul>
+<li>Fixed error when looking for combat targets</li>
+<li>Fix very difficult raids arriving ahead of schedule in hard mode</li>
+<li>Fix raids eventually no longer occuring in hard mode</li>
+<li>Fix a case of rapid target switching if a defense banner is used</li>
+<li>More encounter tuning</li>
+</ul>
+
+<h2>develop_2955</h2>
+
+<h3>Bug Fixes</h3>
+<ul>
+<li>Fixed units not participating in party commands when the party formation is blocked by obstacles</li>
+<li>Fixed units not engaging at a defense banner until attacked</li>
+<li>Fixed ai errors in ranged combat</li>
+<li>Fixed errors when demoting a crafter</li>
+<li>More combat and encounter tuning</li>
+<li>Tune net worth (buildings are now worth more, non-food items worth less)</li>
+<li>Fixed citizen count staying at 1 after all hearthlings have died</li>
+<li>Fixed new game settlement banner being able to be placed on trees and rocks</li>
+<li>Fixed goblin campaign getting stuck after not finding a suitable spawn location for ogo army raid</li>
+</ul>
+
+<h2>develop_2951</h2>
+
+<h3>The Goblin Campaign Concludes!</h3>
+<p>At long last, Ogo Skullbonker makes good on his threat to come and take all your shinies. Will you fight him head on, or follow the advice of the mysterious Erdene?</p>
+
+<h3>Welcome the Red Kiln</h3>
+<p>The Khan is dead, Long Live the Khan! The warriors of the Red Kiln Empire are looking for honor, status, and a good, knock-down-drag-out fight. Are you worthy, or will you prove yourself beneath their notice?</p>
+
+<p>Note: though Alpha 16 is save compatible with Alpha 15 and Alpha 14, you must start a new game in order to see the new goblins and Red Kiln content.</p>
+
+<h3>Other Fixes!</h3>
+
+<ul>
+<li>Fix for a nil storage_component function</li>
+<li>Fix for health not always being updated </li>
+<li>Tons of tweaks to monsters and monster tuning</li>
+<li>Month and date added to clock widget</li>
+<li>AI improvements to archers, clerics, and other long-distance combatants</li>
+<li>Vision in combat is now symmetric</li>
+<li>Tons of cleanup and alignment in the monster raid files</li>
+<li>Sheep jerky is now deprecated</li>
+<li>Tweaks to weapons</li>
+<li>Fix a bug where well-to-do towns weren't getting raids</li>
+<li>Cleric sfx and visual effects pass</li>
+<li>Combat Tree AI fixes</li>
+<li>Fix bug with nil buildings</li>
+<li>Tweaks to XP</li>
+<li>If a building is currently in progress, do not allow moving fixtures</li>
+<li>Fixed bug where you couldn't target/harm objects</li>
+<li>Add double shot animation</li>
+<li>Fixed attack leash bugs</li>
+<li>Add leashes when holding ground; defense command should keep people close to the banner</li>
+<li>Fixed bug preventing archers from attacking large objects.</li>
+</ul>
+
+<h2>develop_2940</h2>
+
+<ul>
+	<li>Disembiggened items</li>
+	<li>Fixed flashing ui</li>
+	<li>Fixed disappearing ui</li>
+	<li>Some more pathing improvements (hearthlings won't zig zag around as much)</li>
+	<li>Better cleanup when releasing objects in memory</li>
+	<li>Now you can spawn an effect on an entity from the console</li>
+	<li>Added effect on cleric AOE healing buff to visualize distance</li>
+	<li>Tweak cleric XP</li>
+	<li>AI fixes so Clerics don't keep trying to heal perfectly healthy people</li>
+	<li>Save/load fixes for health percentages</li>
+	<li>Fixes some health inconsistancies b/w hearthlings and mobs</li>
+	<li>Health is now tracked an an expendable resource</li>
+	<li>AOE healing should not happen on nonvalid entities</li>
+	<li>Better cleanup of notification views</li>
+	<li>Added trophy stockpile filter</li>
+	<li>Remove NPC knight and combat basic buffs, moved numbers to monster tuning files to increase transparency in designing NPCS</li>
+	<li>Added archer SFX</li>
+	<li>Remove orphaned building structures for better memory cleanup</li>
+	<li>Make sure grow walls doesn't happen more than once for a given location</li>
+	<li>Tweaks to bone axes</li>
+	<li>Hard mode monsters first arrive on a more random schedule</li>
+	<li>New hard mode images on story screen</li>
+	<li>Fix spaces and spelling in select game story</li>
+</ul>
+
+<h2>develop_2924</h2>
+
+<ul>
+<li>Cook can now place items that have food in their name</li>
+<li>Food now appears only in one stockpile filter</li>
+<li>Clean up some unused buffs</li>
+<li>Compassion buff is percent based</li>
+<li>Add new icons for Cleric, Knight, Archer, and Footman buffs and perks</li>
+<li>Clerics now get XP when healing allies</li>
+<li>XP distribution fixes: xp goes to combat units around an enemy, around the attacker, and anyone who was targeting the enemy</li>
+<li>Fix for health hearts not showing up properly on load</li>
+<li>Hard mode monsters now appear in 24 hours, not 48, fixes so this can be tuned going forward</li>
+<li>Tuning HP on doors</li>
+<li>Adjustments to net worth and recipes related to doors</li>
+<li>Only enemies that can target siege objects (doors) will try to target siege objects</li>
+<li>Fix for thread being counted as cloth</li>
+<li>Acceptable job icons no longer float over overlaying screens</li>
+<li>Fix for mining adjacent bugs</li>
+<li>Tuning net worth on various items</li>
+<li>Fix for game master service starting twice accidentally</li>
+</ul>
+
+
+<h2>develop_2922</h2>
+
+Welcome to the Unstable Combat Test Version of Stonehearth Alpha 16! This release is all about fighting the good fight. To do that, your hearthlings will need more than Footmen to handle newer, meaner (as well as more familiar) enemies. So we’re bringing you not one, not two, but THREE new hearthling classes that will introduce entirely new dimensions to your town’s combat capabilities.
+</br>
+</br>
+Introducing the Archer, the Knight, and the Cleric. Together with your existing Footmen, these form a formidable fighting force. The Knight is the tank, drawing enemy aggro and soaking damage. The Archer takes the ranged role; fragile in melee but able to do big damage from a distance. High level footmen focus on doing massive damage (DPS, or damage per second) to enemies. The Cleric, while capable of hand-to-hand battling, is really in a support role -- casting directed healing spells and emitting a constant healing aura for nearby allies.
+</br>
+</br>
+With all this new, beefy hearthling firepower on your side, you may be feeling pretty smug about taking down those annoying goblins, golems, entlings, and other beasties that have to date plagued your settlement.
+</br>
+</br>
+Don’t get complacent.
+</br>
+</br>
+Alpha 16 also introduces a host of new enemies… and they’re much tougher than anything you’ve faced to date. Not only that, but as your town grows, they become more powerful. The battle to keep your hearthlings safe and healthy has just begun.
+</br>
+</br>
+This is a very early version of Alpha 16, and as such may be a bit more unstable than our usual unstable releases. In particular, we’re still tuning the balance of new classes and enemies. So we look forward to your feedback.
+</br>
+</br>
+Read on for details of your new fighters… and your new threats.
+
+<h2>The Archer</h2>
+That still only counts as one!
+<ul>
+<li>Requirement: Level 3 Footman</li>
+<li>Promotion talisman: Archer’s Bow (crafted by the Carpenter)</li>
+<li>Upgraded quivers (special arrows) are crafted by the Weaver; in addition to raw materials, these also require poyo feathers, which are an occasional drop from poyo harvesting</li>
+<li>As Archers level up, the damage wrought by their arrows increases; their range grows; and their speed and power become greater (armor piercing!). At their highest level, Archers can even nock and fire two arrows simultaneously.</li>
+<li>Archers are not particularly well-armored, so take care of their position in battle.</li>
+</ul>
+
+<h2>The Knight</h2>
+Fight me IRL.
+<ul>
+<li>Requirement: Level 3 Footman</li>
+<li>Promotion talisman: the Knight’s Shield (crafted by the Blacksmith)</li>
+<li>Apprentice knights start with "Cutting Word" ability, which naturally draws enemy aggro. They also receive bonuses to strength and stamina as their knightly training proceeds.</li>
+<li>Knights have an innate ability to increase the courage of those fighting with them.</li>
+<li>Their starting armor already soaks significant damage, and their advanced abilities help them make better use of armor upgrades as they level up.</li>
+<li>Heavy (steel) armor is now exclusive to Knights, so footmen can focus on being fast damage dealers. Note also that Footmen now do increased damage at higher levels.</li>
+<li>Knights cannot wield two-handed weapons, though Footmen can.</li>
+<li>Though the knight is effective on his own, he is much more important when you have squishier classes in your party, like archers.</li>
+</ul>
+
+<h2>The Cleric</h2>
+Bless yourself before you mess yourself.
+<ul>
+<li>Requirement: Level 2 Herbalist
+<li>Promotion talisman: Cleric’s Tome, crafted by the Herbalist.</li>
+<li>Clerics are combat units, and join parties with footmen, knights, and archers.</li>
+<li>The Cleric is a healer with some (albeit limited) combat abilities. He hits with his book. Have you ever been hit with a big book? It hurts.</li>
+<li>They support the ranged/tank/DPS triangle by making each sturdier and more effective at their job.</li>
+<li>Clerics lose the ability to craft potions and tend to sick hearthlings with bandages, but they can still heal injured townsfolk by standing near them: clerics emit a constant healing aura, and can cast directed healing spells at nearby injured allies.</li>
+<li>The auras increase in power, type, and range as the cleric levels up. The directed healing spell gets stronger too!</li>
+<li>In combat the cleric joins the footman and the knight in the front row, so that all your melee characters can benefit from their healing aura. They will also automatically direct their cooldown-monitored healing spell at appropriately injured allies.</li>
+<li>Clerics also add a buff to the Muscle attribute of those nearby; higher Muscle scores increase weapon damage.</li>
+<li>Add a cleric to a group of townsfolk in town defense mode, and see their chances of surviving dramatically increase!</li>
+</ul>
+
+
+
+<h2>Orcs and Ogres and Kobolds, oh my!</h2>
+Ready to test the new combat capabilities of your hearthlings? You’ll find a host of new, more powerful enemies waiting.
+<ul>
+<li>Orcs come in three flavors: Footmen, Knights, and Clerics. So they’re playing with the same capabilities as your hearthlings.</li>
+<li>Kobold Archers are nasty. Their wolves are nastier.</li>
+<li>Ogres are large, ugly (really, they’re hideous), smelly, and can take -- and dish out -- a lot of damage. Some of them also have the ability to break down doors. So just hiding in a house may no longer be enough.They don’t use keys… just their fists.</li>
+<li>Oh, yeah. As your hearthling population grows, so does enemy difficulty. More hearthlings? Tougher enemies. Just trying to keep your hearthlings on their toes. You’re welcome.</li>
+<li>Hard Mode. At the start of the game, decide if you want a peaceful game, a normal game, or to face off against dramatically more dangerous foes.</li>
+</ul>
+
+<h2>Moar New Things!</h2>
+This release of Alpha 16 also sports other improvements and bug fixes too numerous to list here. But of particular note:
+<ul>
+<li>Upgraded the renderer: improved performance on complex scenes with lots of entities, as well as improved performance with large numbers of light and shadows.</li>
+<li>The “loot” command can now be found in the harvest menu. (Was formerly in the combat menu.</li>
+</ul>
+And additional building improvements:
+<ul>
+<li>You can now move around placed decorations and windows/doors on a building blueprint. (YES!)</li>
+<li>Fixed fixture_fabricator error when removing templates.</li>
+<li>Fixed the ui occasionally not coming up on startup.</li>
+<li>Fixed error where walls could not be grown on 1-high slab.</li>
+<li>Fixed error where fixtures are placed in an incomplete building on load.</li>
+</ul>
+
+<h2>Known Issues</h2>
+<ul>
+<li>If you’re loading a save from a previous Alpha, you may receive an error message that the basic shield does not exist. You can ignore this safely.</li>
+<li>If you’re loading a save from a previous Alpha, and your Footmen were already equipped with steel armor, they will continue to wear it (though in new games, Footmen cannot equip this heavy armor). It’s a loophole. Enjoy it.</li>
+</ul>

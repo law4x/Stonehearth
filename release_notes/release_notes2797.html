@@ -1,0 +1,114 @@
+Welcome to the preview for Stonehearth Alpha 14.
+The theme of Alpha 14 is the evolution of enemy encounters and combat (Part One… to be continued in future releases). You’ll find several new features related to this, as well as continued performance improvements and bug fixes.
+
+This is a Steam unstable branch release; you may encounter monsters of a different kind -- that is to say, bugs. Please report them in our forums at discourse.stonehearth.net.
+
+Here’s what’s new and notable in this release:
+
+<ul>
+<li>Farmers will now harvest again after a load</li>
+<li>Buying items from a store no longer crashes the UI</li>
+<li>Fixed bug where Rayya's Children wear Ascendancy outfits</li>
+<li>Tweak iLevel on giant bone axes</li>
+<li>Show count of citizens and party members on start menu</li>
+<li>Allow layers in hearthling clothing, allow each layer to reveal the layers underneath.</li>
+<li>Adjust human bodies so toes don't poke through boots</li>
+<li>Fixed weapon_data nil error</li>
+<li>Show notification when monster enters combat with hearthling</li>
+<li>Fix issues where goblin chief is not accepting tribute</li>
+<li>Players can no longer move the goblin firepit</li>
+</ul>
+
+<h2>develop 2795</h2>
+
+<ul>
+<li>Fixes for a variety of party-related errors</li>
+<li>Hearthlings do not ping pong between safety points</li>
+<li>Combat tuning: health regen rate, encounter frequency, menace, loot drops, equipment stats</li>
+<li>Weapons can now scale up during encounters</li>
+<li>Performance improvements for farms</li>
+<li>Fix various memory leaks in UI, especially listeners, views, and tooltips</li>
+<li>Poyo pot pie has net worth</li> 
+<li>Fixed uncaught type error in stockpile UI</li>
+<li>Remove unused scaffolding objects from the game</li>
+<li>Fixed issue in the scaffolding renderer</li>
+<li>Undead names now appear in unit frame</li>
+<li>Alert UI displays correctly on load when in alert mode</li>
+<li>Put back red text for incompatible saves</li>
+<li>Fixed combat music not turning off</li>
+<li>All tonics can now be stockpiled</li>
+<li>Fixed error on trying to remove building that isn't started yet</li>
+<li>Fix UI issue on splash screen</li>
+</ul>
+
+
+<h2>develop 2786</h2>
+
+<h2>Moar Monsters!</h2>
+You didn’t think we were going to stop at goblins and undead, did you?
+<ul>
+<li>Several new enemies and enemy encounter types, both raids and ambient appearances (enemies spawn and lie in wait for unsuspecting hearthlings).</li>
+<li>Encounters increase in difficulty over time.</li>
+<li>An encounter spawns randomly in each twelve hour period.</li>
+</ul>
+
+<h2>New Class: The Herbalist</h2>
+Moar enemies? Moar hurt! Call your herbalist.
+<ul>
+<li>Hearthlings injured in combat now heal much, much more slowly without intervention, and their rate of healing is dependent on their willpower stat.</li>
+<li>Once injured, a hearthling’s health status (heart icon) will become visually persistent until healed.</li>
+<li>The Herbalist can heal injured hearthlings quickly.</li>
+<li>The Herbalist can craft a number of healing items.</li>
+<li>The Herbalist can craft strength and stamina tonics.</li>
+<li>The Herbalist’s talisman, a healing staff, is crafted by the Carpenter. It is also available for purchase from a new game’s start screen.</li>
+<li>Wounded hearthlings will seek out beds. The Herbalist can only treat hearthlings who are in beds.</li>
+<li>Wounded and untreated hearthlings will decrease a settlement’s happiness.</li>
+<li>Wounded hearthlings will move more slowly.</li>
+</ul>
+
+<h2>New Combat Party Controls</h2>
+Move. Attack. Defend. I’m talking to you, soldier.
+<ul>
+<li>Only Footmen can now be placed in combat parties.</li>
+<li>Hearthlings who are not Footmen may be enrolled in the Militia; see below.</li>
+<li>You may have up to four combat parties; you can manage each separately from the “Fight and Defend” menu.</li>
+<li>Parties have three modes from which you can select: Move, Attack, and Defend.</li>
+<li>”Move” directs the party to proceed to a specific location, ignoring intervening threats.</li>
+<li>”Attack” directs the party to attack a specific enemy or location, while engaging anything hostile on their way.</li>
+<li>”Defend” directs the party to move towards and then remain at a specific location, engaging anything hostile on its way. The party will remain at the Defense location until otherwise directed.</li>
+</ul>
+
+<h2>New Town Defense Options - and a Well-regulated Militia.</h2>
+Your settlement now has a new way to manage non-combatants in times of crisis. Also, you now have a militia!
+<ul>
+<li>Safety Standards, crafted by the Carpenter or the Potter, can be placed anywhere in your world to create a “safety point” for non-combatant hearthlings. Camp standards are safety points by default.</li>
+<li>Selecting “Town Alert Mode” (formerly Defense Mode) will cause all hearthlings not in the militia to run to their nearest safety point.</li>
+<li>To assist with town defense, non-Footmen hearthlings may be enrolled in the Militia.</li>
+<li>Hearthlings in the Militia will hold their position attack anything hostile that approaches them. They are less likely flee from enemies than their non-militia counterparts and also receive a slight boost in damage.</li>
+<li>By default, all Workers are included in the Militia. By default, all workbench-based crafters are not part of the Militia. You can change who is included (or not) on the “Groups” page, accessed through the tab at the bottom of the Hearthling Therapist interface.</li>
+</ul>
+
+<h2>Other Notable Changes</h2>
+<ul>
+<li>All plants (but not trees) can now be uprooted and relocated.</li>
+<li>All plants (but not trees) regrow after harvest.</li>
+<li>Castle roofs are now included in the building editor.</li>
+<li>Wooden Tunnel Doors can now be crafted by the Carpenter.</li>
+<li>Livestock now remain in their pastures.</li>
+<li>Tweaks to Rayya’s Children, including selected outfits and journal entries.</li>
+<li>Modders can now add custom encounter types.</li>
+</ul>
+
+<h2>Major Bug Fixes and Improvements</h2>
+<ul>
+<li>Identified and fixed some memory leaks.</li>
+<li>Numerous performance improvements, including a further reduction in idle hearthling behavior and support for larger settlements</li>
+<li>Combat music stuttering is eliminated.</li>
+</ul>
+
+<h2>Known Issues</h2>
+<ul>
+<li>Combat music starting and stopping when enemies are not evident; combat music getting stuck.</li>
+<li>Heathling Therapist settings (other than defaults) do not persist on save/load.</li>
+<li>Town Alert Mode UI doesn’t persist on save/load, even though town remains in Alert Mode.</li>
+<ul>

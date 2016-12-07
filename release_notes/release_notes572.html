@@ -1,0 +1,307 @@
+<h1>Alpha 17: Building a Bigger and Better Stonehearth!</h1>
+
+<h2>Here's what's new in this release:</h2>
+
+<h3>Improvements</h3>
+<ul>
+<li>New ahead-of-time scaffolding system: Hearthlings now think hard about scaffolding before they start building, resulting in fewer unbuildable structures.  Will not work for buildings that are already in-progress.</li>
+</ul>
+
+<h3>Bug Fixes</h3>
+<ul>
+<li>Fix for combat UI not unlocking party when footman is promoted</li>
+<li>Fix for combat units not patrolling</li>
+<li>Fix for error when tearing down scaffolding: 'invalid reference in native destination::get_reserved'</li>
+<li>Fix to farm level requirement not showing when first creating a farm</li>
+<li>Fix for too many monster spawns on hard mode due to generator timer calculation errors</li>
+<li>Fix for ai spin when trying to sleep after a bed's owner has changed</li>
+<li>Repairing turrets and traps no longer requires a repair pack</li>
+<li>Fix engineers repairing traps and turrets that are targeting an enemy/in combat</li>
+</ul>
+
+<h2>release_566</h2>
+<h3>Improvements</h3>
+<ul>
+<li>Increase number of uses for turnip shooter and turret</li>
+<li>Traps apply slowing debuffs upon damaging an enemy</li>
+<li>Increase amount of turrets placeable by an engineer</li>
+<li>Increase trap and turret damage</li>
+<li>Traps and turrets now drop some of the resources that were used to craft them when killed by monsters</li>
+<li>Traps and turret uses can be refilled by the engineer, using a craftable repair pack</li>
+<li>Added SFX for Small_Turret and adjusted sounds for Turnip_Shooter </li>
+<li>Increase generator delay for orc campaign camp raids</li>
+<li>Give Bluebell a unique outfit. Bluebell will now only be tameable after the Goblin Chieftain is killed</li>
+<li>Make poyo and sheep run slightly faster</li>
+<li>Nerf blacksmith requirement to become an engineer (level 1)</li>
+<li>Reduced critter trap recipe ingredient requirements</li>
+<li>Allow players to set a config to always have gridlines on</li>
+<li>Updated fountain iconics</li>
+<li>Updated various engineer assets - adding spec to several, added base to engineer turret, added iconics</li>
+<li>Better implementation of finding another block to teardown. Teardown will now be faster and hearthlings will drop resources at their feet instead of putting it back into storage while tearing down</li>
+<li>Make repairing doors loop until the entity is fully repaired</li>
+<li>Show number of items placed on item's (iconic and root) unit frame if the item has placement limitations </li>
+<li>For modders: Added way to specify default list of observers on observers component instead of needing to make an empty AI pack</li>
+<li>Herbalists also get a diligence buff so they don't need much sleep while tending to people's wounds</li>
+<li>Decrease materials needed for Tier 2 city fountains</li>
+<li>Warn the player if they have both an smod and a flat folder for the same mod</li>
+<li>Nerf cleric healing exp, but allow all combat units to get a small amount of exp for patrolling</li>
+<li>Make starvinghearthlings always eat food while sitting on the ground. Prevents hearthlings dying because they're trying to grab a chair</li>
+<li>Hearthlings will now prefer to sleep in an unowned bed over a bed already owned by another hearthling. This discoursages hearthlings without their own beds sleeping in other's beds</li>
+<li>Have engineer refill/fix traps and turrets instead of having the weapons destroy themselves when they run out of uses</li>
+<li>Farmer crops now have level restrictions</li>
+<li>Added Rayya's Children watermelon crop</li>
+<li>Add names for building brushes patterns so they mention the names of the voxel colors that are used in said patterns</li>
+<li>Make pets despawn after a day if you decided to release them </li>
+<li>Separate ladder building into common task category versus building category. This way we don't have hearthlings that have build unchecked constantly trying to help build scaffolding</li>
+<li>Updating engineer class icon to match new wrench</li>
+<li>Make hard mode encounters generate slightly slower</li>
+<li>Add some gold trim to the female upgraded worker outfit so that the portrait for the worker will look different from the normal outfit </li>
+<li>Throw rugs are now in the decoration category</li>
+<li>Added plants and trophies categories to the Decorations tab in building editor</li>
+</ul>
+
+<h3>Bug Fixes</h3>
+<ul>
+<li>Fixed scaffolding not tearing down after save load</li>
+<li>Fixed traps turning towards monsters when attacking</li>
+<li>Pause the game while auto saving because there can be problems if the game is simulating while saving</li>
+<li>Fix bug where herald comes back multiple times if you save/load the game in the middle of the quest</li>
+<li>Fix one bug causing hearthling never becoming hungry</li>
+<li>Make shepherds only go out and get one animal at a time for new pastures. Prevents shepherds constantly moving slowly because they have a large herd of animals following them</li>
+<li>Fix bug in player territory where buildings being designed would not mark territory after performing a save/load</li>
+<li>Fix bug where clerics were trying to walk off to patrol in the middle of combat</li>
+<li>Make level 0 knights have a single target taunt ability that keeps them high on the aggro table. Fix not having aggro override passed into battery context for single target attacks</li>
+<li>Fix bug where defense zones blocked zoning of farms and pastures </li>
+<li>Fix up new game menus to always display centered for large display monitors</li>
+<li>Performance tweaks for combat</li>
+<li>Reduce memory footprint of roads</li>
+<li>Fix for tombstone hover tooltips showing up with bad loc strings in the town inventory UI</li>
+</ul>
+
+<h2>develop_3023</h2>
+<h3>Improvements</h3>
+<ul>
+<li>Beta feature - Combat parties now patrol together in formation</li>
+<li>Added new herbalist tonic. Temporarily gives citizens a speed boost and makes them less sleepy</li>
+<li>Military strength is now shown in the town overview</li>
+<li>Added Ctrl+z as a hotkey for Undo in the Building Editor</li>
+<li>Erase tool has been moved to under the Undo tool in Building Editor</li>
+<li>Added ability to erase stairs</li>
+</ul>
+
+<h3>Bug Fixes</h3>
+<ul>
+<li>Fixed goblin campaign restarting after already being completed</li>
+<li>Fixed visual issues with the Turnip Shooter</li>
+<li>Changed collision regions for dressers to better match their shape</li>
+<li>Deleting custom building templates now also deletes their thumbnails</li>
+</ul>
+
+<h2>develop_3019</h2>
+
+<h3>Improvements</h3>
+<ul>
+<li>Added stairs tool to Building Editor</li>
+<li>Wrench animations and SFX for working at engineering workbench</li>
+<li>Updated turnip shooter model and animations</li>
+<li>Updating Cleric VFX for Single Target Heal and Healing Aura</li>
+<li>Updated Engineer clamp trap model</li>
+<li>Engineer's Iron Clad Door is now lockable</li>
+</ul>
+
+<h3>Bug Fixes</h3>
+<ul>
+<li>Make sure unlock recipe encounters clean up their nodes after the notification is closed</li>
+<li>Updated the slab tool blocks in the building editor art to look less like the stairs</li>
+<li>Label all the two handed weapons as such in their descriptions</li>
+<li>Fix campaigns not ending correctly due to incorrect node name being set on start</li>
+<li>Fix City Tier statue recipes so that they are actually unlocked when the Herald arrives</li>
+<li>Fix City Tier status unlock messages not being localized</li>
+<li>Fix for monsters attacking critters</li>
+</ul>
+
+<h2>develop_3013</h2>
+
+<h3>Bug Fixes</h3>
+<ul>
+<li>Fix stockpile filters for a bunch of items</li>
+<li>Valor and Wealth statues now have modeled streams</li>
+<li>Added VFX and SFX to Tier 2 statues</li>
+<li>Fix for indexing nil door component</li>
+<li>Update Engineer workbench to new asset</li>
+<li>Add tooltips for raising and lowering the slice height in slice mode</li>
+<li>Allow mining zones to merge vertically. Makes carving stairs out of terrain much easier</li>
+<li>Fix not allowing roofs to be grown over disjoint openings in floor</li>
+<li>Don't perform a perimeter patrol around small objects. Just visit them and move to the next patrollable object</li>
+<li>Edited herald dialog and statue descriptions. Add a portrait for Anwyn</li>
+<li>Add a visualizer for movement guard shape and movement modifier shape</li>
+<li>Engineers now get goggles!</li>
+<li>Added pen scratching SFX for the select game story UI screen at start of screen</li>
+</ul>
+
+<h2>develop_3010</h2>
+<h3>Bug Fixes</h3>
+<ul>
+<li>Fix for slab tool not snapping correctly in Build Editor</li>
+<li>Fix for crash to desktop when using Build Editor</li>
+<li>Fix roof option adjustment resulting in broken roof intersections</li>
+<li>Don't stall in fabricate if we aren't carrying the things we need</li>
+<li>Add ability to lock doors if they have the toggle lock command </li>
+<li>Add a varanus skin to crypt loot chest</li>
+<li>Fixed a bug with fall-off volume for wolves and goblins</li>
+<li>Fixes patrol routes around objects not being rectangular</li>
+</ul>
+
+<h2>develop_3008</h2>
+<h3>Improvements</h3>
+<ul>
+<li>Added a way for modders to specify that a certain part of a mixinto will override an entire node. Usage example -- "mixintype_given_names": "override" . This allows us to replace arrays instead of adding to them</li>
+<li>Added Varanus ambient mobs so Varanus skins will be available even in late game</li>
+<li>Added SFX for mountain wind chimes!</li>
+<li>Merge some un- or infrequently used stockpile filters -- refined animal part and heavy armor. Refined animal part was only leather bolts, which is now rolled under the cloth section. Heavy Armor and Light armor are merged into one section</li>
+<li>You can now change colors of already placed floor, foundation, and roads in Building Editor</li>
+<li>Add fountain splash effects for the tier 2 statues</li>
+</ul>
+
+<h3>Bug Fixes</h3>
+<ul>
+<li>Fix some gongs requiring wrong ingredients </li>
+<li>Players who have mods installed will have an (M) added to the end of their version string (to help us better diagnose potential issues)</li>
+<li>Stop destroying completed legacy scaffolding regions on load</li>
+<li>In Build Editor mode, the selected building will be more opaque while unselected buildings will be semi transparent.</li>
+<li>In Build Editor mode, selected building subparts have a blue highlight</li>
+<li>Fix for doors and windows disappearing when clicking on them. When moving a doodad to a new location, but that doodad's new location is BAD, cancel the move operation. Use the erase tool to delete windows and doors after placement</li>
+<li>Fix pillage mission still going when enemy becomes neutral/friendly</li>
+<li>Fix for farmers not able to farm if the farmer field is not accessible on all 4 sides, but is accessible in the middle</li>
+<li>Add a new option for auto update adjacency, which is the center (IE the cube that represents the destination). ALL is now all corners, all edges, and center</li>
+<li>Try our best to deal with inconsistent scaffolding state</li>
+<li>Update region collision shape for city tier 2 statues</li>
+</ul>
+
+<h2>develop_3002</h2>
+<h3>Improvements</h3>
+<ul>
+<li>Added SFX for Single Target Heals from the Cleric; changed the Cleric "channeling" a heal SFX as well</li>
+<li>Engineer turrets and traps are now automatically replaced when they are used up or killed</li>
+<li>Updated Engineer outfit design</li>
+<li>Added new fanfare jingle for city Tier Two level up</li>
+<li>Add an animation to Mountain's windchime (existing windchimes may -- or may not -- work correctly)</li>
+<li>Increase spawning frequency of shops</li>
+<li>Updated crafting requirements for Shrine of Plenty</li>
+<li>Engineers can repair doors and traps/turrets</li>
+</ul>
+
+<h3>Bug Fixes</h3>
+<ul>
+<li>More scaffolding_region lifecycle fixes</li>
+<li>Fix engineer turret and trap placement limits not being updated correctly when placing through the build editor</li>
+<li>Fix a bad version upgrade to player territories which broke all hearthling and monster spawning code</li>
+<li>Fix for autoloot not working on some items</li>
+<li>Fix building costs not showing up if saving a template from a building that's already finished</li>
+<li>Save/load back-compatibilty fixes for scaffolding</li>
+<li>Fix for workshop and level requirement text not updating when clicking from one crafter workshop to the next</li>
+<li>Fix Cleric healing doors with their heal action</li>
+<li>Add console command to change amenity, so players can continue goblin campaign if using an bugged/old save where the amenity stayed at neutral</li>
+<li>Cleric tuning 2: cleric healing aura is now a level 1 perk. There are only 2 ranks for heal aura now. Clerics in existing save games will need to be demoted and repromoted</li>
+<li>Put back Remove building button for buildings that haven't been started yet. Disable remove and edit buttons when a building has started construction</li>
+<li>When a combat command is issued we now cancel the previous command permanently, instead of having a temporary override of individual commands over party commands</li>
+<li>If a scaffolding region cannot be started, make sure we don't try to ​_restart_​ it when set_active is called again</li>
+</ul>
+
+<h2>develop_3000</h2>
+<h3>Bug Fixes</h3>
+<ul>
+<li>Doors and Windows in build editor now show in build editor as soon as you have a crafter that can make those item. Fixes Iron Door not showing up in windows and doors section.</li>
+<li>Add 9-grid logic to properly fill in gaps below two roof under/over hangs meeting</li>
+<li>Enable large address aware for 32 bit version of the game</li>
+<li>Loot tool is now useable on roads and buildings</li>
+<li>Updating with the new fountains of valor, craftsmanship, and wealth for Tier2 Ascendancy cities</li>
+<li>Fix multiple reasons for clerics not healing</li>
+<li>Cleric healing animation is now shorter in exchange for healing less per cast</li>
+<li>Update images for all Ascendancy housing templates</li>
+<li>Fix infinite load issue due to scaffolding</li>
+<li>Remove Iron Coif completely from the game. It has been replaced by Iron Helmet</li>
+</ul>
+
+<h2>develop_2998</h2>
+<h3>Bug Fixes</h3>
+
+<ul>
+<li>Fix for ghost furniture falling to the ground in build editor mode</li>
+<li>Fix blacksmith engineer wrench recipe using engineer workbench instead of blacksmith's</li>
+<li>Prohibit ranged combat from ladders. Really unfair when melee units can't counterattack.</li>
+<li>Fix units leaving combat to eat / patrol etc because they can't find a path to the ladder target.</li>
+<li>Fix Game froze after loading due to bugged craft order list</li>
+</ul>
+
+<h2>develop_2996</h2>
+
+Welcome to the unstable debut of Stonehearth Alpha 17! This release is all about empowering your hearthlings to build more awesome settlements. To do this, we’re introducing the ability for your town to level up, we’re giving you a new class to help create settlement awesomeness, and we’ve made tons of upgrades to the building system itself.
+</br>
+</br>
+We should note that Alpha 17 is merely Part One of improving the building experience. We’ll be continuing this effort, with both content and functionality, in Alpha 18.
+</br>
+</br>
+Remember that this is an unstable release! Which means that you may -- nay, you <em>will</em> encounter glitches and the unexpected. Please report any issues in Discourse on Stonehearth.net or in our Steam forums. (Hey, that’s what unstable releases are for!)
+</br>
+</br>
+Let’s take a closer look at what’s in this release.
+
+<h2>Blood, Sweat, and Tiers</h2>
+<em>Get on my level.</em>
+</br>
+</br>
+Your hearthlings have labored mightily to carve an impressive settlement out of the wilderness. They are the envy of their map tile. And yet, they are asking themselves, “Is that all there is?” To which we can now say, “Absolutely not.”
+</br>
+</br>
+A few days after your hearthlings settle in their new home, you will receive a quest from a royal herald. Create one of three city monuments to commemorate your town's particular strengths and skills, and your settlement will qualify for "Township Status" which will elevate your hearthling-ville to a new tier of impressiveness.
+</br>
+</br>
+Attaining this new tier unlocks advanced building templates, launches upgraded and enhanced stores, and introduces a new tier of background music! This quest is currently available only for the Ascendancy, more to come in future Alphas. 
+
+<h2>In Stonehearth, all our engineers are civil.</h2>
+<em>It’s a trap!</em>
+</br>
+</br>
+Want to make a more awesome city? You’ll need an Engineer! Good thing we’re introducing just that in this Alpha. Engineers provide a whole new dimension to your town’s capabilities.
+</br>
+</br>
+Promoted from a Level Two Blacksmith (with the help of a Wrench, crafted by a Level Six Blacksmith), The Engineer creates advanced contraptions and defensive weaponry.
+</br>
+</br>
+Initially, for defensive weapons, he can craft two types of turrets and two traps. The turrets will target and fire at enemies; they are limited in the number you can place in your town, based on level and number of engineers in town. Turrets have a limited lifespan (they will fall apart after a certain number of uses).
+</br>
+</br>
+Traps can be set off once and and will stun enemies who stumble across them; they deal burst damage, and you can place more of them in your town than the turrets. In the beginning, Engineers can place 4 traps and 1 turret; this allowance increases as your Engineer levels up.
+</br>
+</br>
+In future, Engineers will create more epic craftables, but for now the only decorations they can fashion are an iron door and signpost. We will continue to add recipes in the coming weeks. More turret types and AOE towers are also planned along with the ability to automatically replace fallen turrets and spent traps. 
+
+<h2>Build castles in the sky. Well, almost.</h2>
+<em>Build, or build not. There is no try.</em>
+</br>
+</br>
+We’ve streamlined and updated the building system. Now building functions more smoothly; you should be able to design -- and your hearthlings will complete! -- buildings that previously remained unbuilt. We’ve added some messaging to the building process; among other things, commissioning a building will also automatically set your crafters to work producing the needed items for your new structure. And (drum roll) -- beds can now be “owned” by individual hearthlings!
+</br>
+</br>
+The system is not perfect -- not everything may work -- but we think you’ll find it a huge leap forward. Please let us know how it works for you.
+</br>
+</br>
+Improvements include (but are not limited to):
+
+<ul>
+<li>When building is complete, display a congratulatory message instead of an empty materials needed box. Do not display the build “Pause” button when building is complete.</li>
+<li>Fix issue with breaking up large floors that lead to unbuildable buildings.</li>
+<li>First step in building template UI update. Default building templates and custom templates are displayed under different tabs in the Building Editor UI. Kingdom-specific templates are listed separately.</li>
+<li>Bed ownership! Beds can now be assigned to individual hearthlings.</li>
+<li>A huge number of scaffolding fixes and improvements! Scaffolding now understands when its structure has completed. Fix a bug with shared scaffolding. Don't place scaffolding in places that will be blocked. And more...</li>
+<li>Have town keep track of buildings that are stuck because their materials do not exist in the world.</li>
+<li>Correctly merge walls with nearby buildings.</li>
+<li> When the “Build” command is given, find all the fixtures needed for the building and add items needed to the relevant crafter queues.  Add gameplay setting to enable or disable building auto queue; default is on.</li>
+<li>Turn off building removal option until we implement more effectively.</li>
+</ul>
+
+We’ve also made refinements in other important areas. We’re continuing to polish and improve combat and party behavior, especially around the placing and removal of defense banners. Additionally, pathfinding can now handle large numbers of destinations without bogging down the CPU.
+</br>
+</br>
+As with all new Alpha releases, we’ve also added literally hundreds of changes, additions, fixes, and the like. We’ll update these notes with a more detailed list in the coming weeks.

@@ -1,0 +1,126 @@
+Welcome to Stonehearth Alpha 13!
+
+Here's what's new in the release:
+
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed another idle hearthling bug.</li>
+<li>CPP AI and the Subspace Pathfinder are now always on and cannot be disabled. This should fix some games that were crashing when they were turned off.</li>
+<li>Fixed bug that was causing hearthlings to run in place or attempt to walk through the air.</li>
+<li>Removed optimization that was causing some mining faces to be hard to mine.</li>
+<li>Fixed Citizens window not properly selecting a citizen.</li>
+</ul>
+
+<br/>
+<h2>Release-483</h2>
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed adding roofs to L-shaped buildings.</li>
+<li>Fixed one bug that caused hearthlings not to mine. There is still another idle mining bug though.</li>
+<li>Fixed engine error when trying to attack with an invalid weapon.</li>
+<li>Fixed bug where Potter Kiln smokes forever when the potter goes off to eat; thanks for debugging that, Jomaxro!</li>
+<li>Fixed collision height on Potter Kiln.</li>
+</ul>
+
+<h2>Other Changes</h2>
+<ul>
+<li>Cluster trees around lakes in desert biome. Improve placement of boulders and flora.</li>
+<li>Added Buy All/Sell All buttons in trading window.</li>
+<li>Rayya's Children pays less than Ascendancy at some common stores.</li>
+<li>Rayya's Children worker outfit 2 is now properly colored.</li>
+<li>Rayya's Children weaver no longer makes winter outifts.</li>
+<li>Rayya's Children hearthings now call on Rayya, not Cid, in moments of stress.</li>
+</ul>
+
+<br/>
+<h2>Develop-2733</h2>
+
+<h2>Bug Fixes</h2>
+<ul>
+<li>Sloped roofs on non-rectangular houses now build correctly.</li>
+<li>The building editor now properly imports roof data about slant.</li>
+<li>Wide overhangs now no longer create roof structures of infinite distance.</li>
+<li>Fixed some issues with iconic item materials on load</li>
+<li>Fixed engine error when items are destroyed en-route to workshops.</li>
+</ul>
+
+<br/>
+<h2>Develop-2720</h2>
+
+<h2>Redesigned Game Options</h2>
+All new storybook-inspired getting started screen: select your kingdom, biome, and difficulty via interactive illuminated manuscript ​with borders by Tom and illustrations from Allie.
+
+<h2>New Biome</h2>
+Welcome to the desert! Eat prickly pears and husband your wood; it's beautiful but bleak out there.
+
+<h2>New Playable Kingdom</h2>
+​Rayya's Children is now available for play-testing!
+<ul>
+<li>Their default starting talisman is the Potter's Cutter.</li>
+<li>Make clay bricks to build shelter in the desert.</li>
+<li>Four brand new desert-themed housing templates.</li>
+<li>New desert-themed UI skin, supported by the hot-loading mods feature.</li>
+<li>New trading encounters.</li>
+<li>Make lots of items to sell for necessities and talismans.</li>
+</ul>
+
+​Rayya's Children's basic systems are in place, but still need a lot of tuning, so write us with your feedback.
+
+<h2>New Roof Editor</h2>
+We've added more options to the roof editor. You can now make flat roofs, control the height of the walls below the roof, and the amount of roof overhang in each direction.
+
+<h2>"Hearthling Therapist"</h2>
+The citizens UI has been overhauled and redesigned! In addition to showing portraits and attributes for the hearthlings, you can now select which jobs the hearthling should be able to perform. This makes it a lot easier to decide who to promote and control what jobs should be performed in your town.
+
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fixed a pathfinding bug that resulted in idle workers.</li>
+<li>Fixed two bugs that prevented hearthlings from mining or building structures.</li>
+<li>Fixed bug that caused enemies not to attack.</li>
+<li>Fixed bug that caused hearthlings to float after ladders or earth had been removed from below them.</li>
+<li>Prevent enemy camps from spawning over anyone's town (including other NPC camps).</li>
+<li>Fixed bug in crafting window that selected the first item when another window popped up.</li>
+<li>Support undo when placing furniture and decorations in the building editor.</li>
+<li>Check for collisions when placing items in buildings or on structures.</li>
+<li>Fixed placed items not staying placed (e.g. rugs would always get restocked after placement).</li>
+<li>Fixed engine error when picking up a destroyed item from a backpack.</li>
+<li>Fixed facing when picking up items from stockpiles.</li>
+<li>Improved physics code when an entity is stuck in something solid. Prevents hearthlings from ending on top of planted or growing trees.</li>
+<li>Make it difficult to accidentally place hearthlings on top of trees when selecting a settlement location.</li>
+<li>Fixed bug when lowering the water level of a lake.</li>
+<li>Flag error, but allow water simulation to self correct after a non-fatal error.</li>
+<li>Fixed engine error when changing crops on a fallow field.</li>
+<li>Fixed panic posture which was only showing up half the time when panicking during combat.</li>
+<li>Fixed bug that caused doors/gates not to open for hearthlings.</li>
+<li>Selecting items to loot will now ignore items already in storage.</li>
+<li>Fixed model and collision regions for a bunch of items.</li>
+<li>Make Potter Wheel restockable.</li>
+<li>Fixed stock category for the Coarse Fiber Bundle.</li>
+<li>Fixed the icon for the cook outfit.</li>
+<li>Fixed titles for the Master Mason and Master Cook.</li>
+</ul>
+
+<h2>Other Changes</h2>
+<ul>
+<li>The Potter class has now been added! Mine clay from the earth and convert it to clay lamps and pots. Clay can also be turned into bricks for building.</li>
+<li>Structures that have been completed can now be torn down. Select the structure in build mode 'b' and press the 'Remove' button. Note that this doesn't work for buildings that used the insta-build console command.</li>
+<li>Items now fall off ladders.</li>
+<li>Crafting a fine item now grants an addition item instead of replacing the ordinary item. This makes satisfying trading demands more reliable until we allow traders to accept the fine versions of items.</li>
+<li>Doors can now be placed in the world like furniture, so they can now be placed in mines/tunnels. The Wooden Double Door fits perfectly with a 4 block wide opening.</li>
+<li>Tweaked experience gain so that there is more balance when leveling up professions.</li>
+<li>By popular demand, add the Gilded Crimson Rug to the game.</li>
+<li>Improved placement of decorative items on ledges.</li>
+<li>The drop rate of stone when mining dirt has been reduced.</li>
+<li>Waterfalls have a new animated effect that depends on the amount of water flowing.</li>
+<li>Enable mining for the Blacksmith and Mason.</li>
+<li>Added tooltips to resources in the building designer.</li>
+<li>Tweaked prices on a number of items.</li>
+<li>Allow promotion talismans to be sold.</li>
+<li>The Quickstart button has been disabled.</li>
+<li>Detect and notify the player when Lavasoft Ad-Aware crashes Stonehearth.</li>
+</ul>
+
+<h2>Known Issues</h2>
+<ul>
+<li>Freestanding doors cannot be moved or undeployed. You can use the Clear command on the Harvest menu to destroy them though.</li>
+</ul>

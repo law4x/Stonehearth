@@ -1,0 +1,241 @@
+Welcome to the preview for Stonehearth Alpha 14.
+The theme of Alpha 14 is the evolution of enemy encounters and combat (Part One… to be continued in future releases). You’ll find several new features related to this, as well as continued performance improvements and bug fixes.
+
+This is a Steam unstable branch release; you may encounter monsters of a different kind -- that is to say, bugs. Please report them in our forums at discourse.stonehearth.net.
+
+<p>Here’s what’s new and notable in this release:</p>
+
+<ul>
+<li>Turn on release-level performance optimizations</li>
+<li>Improved disposal of defunct encounter nodes, for performance and debug-ui readability</li>
+<li>Improve memory usage when looking for things in boxes</li>
+<li>Goblin raids no longer spawn if goblins are friendly/neutral</li>
+<li>Continue tuning difficulty of encounters</li>
+<li>Fix bug where daily report fails on exact match of requirements</li>
+<li>Fix various performance and memory issues involved in creating cubes within which to search for things</li>
+<li>Add sanity checks to spawn-point pathing code</li>
+<li>Add hedge so sounds don't repeat indefinitely</li>
+<li>Fixes to the A* pathfinder</li>
+<li>Upgrade to boost 1.60 to fix a crashing bug</li>
+<li>Fix for roofs-suddenly-turn-flat bug</li>
+<li>Tweak willpower and healing equations</li>
+<li>Fix a bug where people get hands of different colors than their faces</li>
+<li>Shepherd now gets correct amount of wool</li>
+</ul>
+
+
+<h2>Develop-2820</h2>
+
+<ul>
+<li>Fix issues with undeploying items</li>
+<li>Hearthlings will now build ladders (down) properly again</li>
+<li>Update to farmer bonnet model</li>
+<li>Bronze recipes added to blackmsith</li>
+<li>New gold is added to existing gold chests, instead of spawning new chests, until existing chests are full</li>
+<li>Continued work on destroying defunct encounter nodes, for performance and debug UI readability</li>
+<li>NPCs will own their stockpile items</li>
+<li>Alignment fixes for workshops</li>
+</ul>
+
+<h3>Hats and Helms!</h3>
+Moar Monsters? Moar Armor! This release finally implements a new schema for hair that allows for hats and helmets. Some classes come with hats by default, and others can get helmets from advanced crafting recipes. For modders, this release also includes a new way to define the colors of things from json palettes, allowing more variation in hearthling hair colors, skin tones and more. As a side effect of this update, hearthlings imported from older saves may now look different than they used to; think of it as Xtereme Makeover, Stonehearth Edition. 
+
+<h3>Features and gameplay bugfixes:</h3>
+<ul>
+<li>Lots more hair color variations and permutations for hearthlings</li> 
+<li>People no longer allowed to attack objects that have no hit points</li>
+<li>Task groups and hearthling therapist now saves/loads properly</li>
+<li>Food now disappears if it is half eaten; should solve food littering issues</li>
+<li>More tuning for enemy encounters </li>
+<li>Generic banners for individual combat commands</li>
+<li>Add icon for tumbleweed</li>
+<li>Farmers no longer place only plants</li>
+<li>All doors now properly keep out enemies</li>
+<li>Party banners now work correctly with older saves</li>
+<li>Cancel order command now available on combat banners</li>
+<li>Cancel order command now available on party and fooman unit frames</li>
+<li>Place item action text now properly shows item being placed</li>
+<li>Fixed a crafter UI bug when crafting window is open during level up</li>
+<li>Fixed counts in placement UI to update properly when placing items</li>
+<li>You should get a notification the first time you engage with enemies from an encounter </li>
+<li>Rotten food is now a separate thing, so you can delete it. All rotten baskets of food will become a generic rotten basket of mush</li>
+<li>Crafting buttons are now fully clickable</li>
+<li>Properly line up carpenter workbenches</li>
+<li>Put items on table at correct offset</li>
+<li>Add repeat flag to sounds, golem footsteps</li>
+<li>Fix lots of ittle workshop issues</li>
+<li>Make sure ladders track height of scaffolding</li>
+<li>Stop hearthlings from falling through scaffolding</li>
+<li>Add loot drops to wolf raid</li>
+<li>SFX for Goblins and Golems and other monsters</li>
+<li>Increase clay drops in desert</li>
+<li>Fix up inconsistent farms on load</li>
+<li>Fix party banners so they work in older saved games</li>
+<li>Undead infection debuff now stops all natural healing</li>
+<li>If an animal is spawned by a shepherd and not claimed for the pasture, it will disappear in a day</li>
+</ul>
+
+
+<h3>Performance and optimization enhancements:</h3>
+<ul>
+<li>Various fixes for ladders</li>
+<li>Destroy unnecessary traces, to improve performance and memory usage</li>
+<li>Make restocking much faster</li>
+<li>Release lease immediately for unneeded items</li>
+<li>Performance enhancements to building, fix some memory leaks</li>
+<li>Fix lua and coroutine related memory leaks in the game's AI</li>
+<li>Fix mining bugs introduced by town task management improvements</li>
+<li>Expanded pathfinding range for hearthlings to 1,000 voxels</li>
+<li>Fix issue growing walls and columns to intersect roof</li>
+<li>Encounter nodes are now reaped when the encounter is over</li>
+</ul>
+
+<h2>develop 2807</h2>
+
+<ul>
+<li>Performance optimizations for towns with lots of placed items</li>
+<li>Performance optimizations for compound actions</li>
+<li>Remove stone bricks from crypt drops</li>
+<li>Tweaks to crypt loot</li>
+<li>Tweaks to armor stats</li>
+<li>Party banners now reflect the party that they belong to, and toasts show the command</li>
+<li>Parties in the UI are disabled until you have a footman</li>
+<li>Normalized lots and lots of net worth/prices</li>
+<li>Fixed a lot of UI slowness due to information oversharing from server</li>
+<li>Sound effects for new monsters</li>
+<li>Performances improvements in crafters</li>
+<li>Fixed error where json was not serializing tiny ints correctly</li>
+<li>Sell items at their net worth, buy with a multiplier based on the store</li>
+<li>Added resale value to safety banners</li>
+<li>Goblin stockpiles now start with wood</li>
+<li>Various fixes to make hair work with palettes</li>
+<li>Combat music should only start when combat is joined</li>
+<li>Various combat-related tuning fixes</li>
+<li>Engine errors are now remoted properly to UI</li>
+<li>Prevent combat tools from stacking on top of each other</li>
+<li>Fixed bug with combat actions not correctly unsetting sitting/carrying postures</li>
+<li>Stone golems now drop things</li>
+<li>Goblins are now neutral to everyone during goblin chief camp encounter</li>
+<li>Scale up giant zombie raid weapon</li>
+<li>Various memory leak fixes</li>
+<li>Added courage tonic</li>
+<li>All tonics can now be placed/moved about in the world so you can put them in crates and get them back out</li>
+<li>Optimizations to the task group/AI model</li>
+<li>Hearthling Therapist selections persist over save/load</li>
+<li>Performances improvements in specific item</li>
+<li>Change job name correctly in unit frame when job changes</li>
+<li>Show button to delete incompatible saves</li>
+<li>Health indicator should now appear above giant zombie</li>
+<li>Fix issue where people don't play idle animations</li>
+
+</ul>
+
+<h2>develop 2797</h2>
+
+<ul>
+<li>Farmers will now harvest again after a load</li>
+<li>Buying items from a store no longer crashes the UI</li>
+<li>Fixed bug where Rayya's Children wear Ascendancy outfits</li>
+<li>Tweak iLevel on giant bone axes</li>
+<li>Show count of citizens and party members on start menu</li>
+<li>Allow layers in hearthling clothing, allow each layer to reveal the layers underneath.</li>
+<li>Adjust human bodies so toes don't poke through boots</li>
+<li>Fixed weapon_data nil error</li>
+<li>Show notification when monster enters combat with hearthling</li>
+<li>Fix issues where goblin chief is not accepting tribute</li>
+<li>Players can no longer move the goblin firepit</li>
+</ul>
+
+<h2>develop 2795</h2>
+
+<ul>
+<li>Fixes for a variety of party-related errors</li>
+<li>Hearthlings do not ping pong between safety points</li>
+<li>Combat tuning: health regen rate, encounter frequency, menace, loot drops, equipment stats</li>
+<li>Weapons can now scale up during encounters</li>
+<li>Performance improvements for farms</li>
+<li>Fix various memory leaks in UI, especially listeners, views, and tooltips</li>
+<li>Poyo pot pie has net worth</li> 
+<li>Fixed uncaught type error in stockpile UI</li>
+<li>Remove unused scaffolding objects from the game</li>
+<li>Fixed issue in the scaffolding renderer</li>
+<li>Undead names now appear in unit frame</li>
+<li>Alert UI displays correctly on load when in alert mode</li>
+<li>Put back red text for incompatible saves</li>
+<li>Fixed combat music not turning off</li>
+<li>All tonics can now be stockpiled</li>
+<li>Fixed error on trying to remove building that isn't started yet</li>
+<li>Fix UI issue on splash screen</li>
+</ul>
+
+
+<h2>develop 2786</h2>
+
+<h2>Moar Monsters!</h2>
+You didn’t think we were going to stop at goblins and undead, did you?
+<ul>
+<li>Several new enemies and enemy encounter types, both raids and ambient appearances (enemies spawn and lie in wait for unsuspecting hearthlings).</li>
+<li>Encounters increase in difficulty over time.</li>
+<li>An encounter spawns randomly in each twelve hour period.</li>
+</ul>
+
+<h2>New Class: The Herbalist</h2>
+Moar enemies? Moar hurt! Call your herbalist.
+<ul>
+<li>Hearthlings injured in combat now heal much, much more slowly without intervention, and their rate of healing is dependent on their willpower stat.</li>
+<li>Once injured, a hearthling’s health status (heart icon) will become visually persistent until healed.</li>
+<li>The Herbalist can heal injured hearthlings quickly.</li>
+<li>The Herbalist can craft a number of healing items.</li>
+<li>The Herbalist can craft strength and stamina tonics.</li>
+<li>The Herbalist’s talisman, a healing staff, is crafted by the Carpenter. It is also available for purchase from a new game’s start screen.</li>
+<li>Wounded hearthlings will seek out beds. The Herbalist can only treat hearthlings who are in beds.</li>
+<li>Wounded and untreated hearthlings will decrease a settlement’s happiness.</li>
+<li>Wounded hearthlings will move more slowly.</li>
+</ul>
+
+<h2>New Combat Party Controls</h2>
+Move. Attack. Defend. I’m talking to you, soldier.
+<ul>
+<li>Only Footmen can now be placed in combat parties.</li>
+<li>Hearthlings who are not Footmen may be enrolled in the Militia; see below.</li>
+<li>You may have up to four combat parties; you can manage each separately from the “Fight and Defend” menu.</li>
+<li>Parties have three modes from which you can select: Move, Attack, and Defend.</li>
+<li>”Move” directs the party to proceed to a specific location, ignoring intervening threats.</li>
+<li>”Attack” directs the party to attack a specific enemy or location, while engaging anything hostile on their way.</li>
+<li>”Defend” directs the party to move towards and then remain at a specific location, engaging anything hostile on its way. The party will remain at the Defense location until otherwise directed.</li>
+</ul>
+
+<h2>New Town Defense Options - and a Well-regulated Militia.</h2>
+Your settlement now has a new way to manage non-combatants in times of crisis. Also, you now have a militia!
+<ul>
+<li>Safety Standards, crafted by the Carpenter or the Potter, can be placed anywhere in your world to create a “safety point” for non-combatant hearthlings. Camp standards are safety points by default.</li>
+<li>Selecting “Town Alert Mode” (formerly Defense Mode) will cause all hearthlings not in the militia to run to their nearest safety point.</li>
+<li>To assist with town defense, non-Footmen hearthlings may be enrolled in the Militia.</li>
+<li>Hearthlings in the Militia will hold their position attack anything hostile that approaches them. They are less likely flee from enemies than their non-militia counterparts and also receive a slight boost in damage.</li>
+<li>By default, all Workers are included in the Militia. By default, all workbench-based crafters are not part of the Militia. You can change who is included (or not) on the “Groups” page, accessed through the tab at the bottom of the Hearthling Therapist interface.</li>
+</ul>
+
+<h2>Other Notable Changes</h2>
+<ul>
+<li>All plants (but not trees) can now be uprooted and relocated.</li>
+<li>All plants (but not trees) regrow after harvest.</li>
+<li>Castle roofs are now included in the building editor.</li>
+<li>Wooden Tunnel Doors can now be crafted by the Carpenter.</li>
+<li>Livestock now remain in their pastures.</li>
+<li>Tweaks to Rayya’s Children, including selected outfits and journal entries.</li>
+<li>Modders can now add custom encounter types.</li>
+</ul>
+
+<h2>Major Bug Fixes and Improvements</h2>
+<ul>
+<li>Identified and fixed some memory leaks.</li>
+<li>Numerous performance improvements, including a further reduction in idle hearthling behavior and support for larger settlements</li>
+<li>Combat music stuttering is eliminated.</li>
+</ul>
+
+<h2>Known Issues</h2>
+<ul>
+<li>Combat music starting and stopping when enemies are not evident; combat music getting stuck.</li>
+<li>Heathling Therapist settings (other than defaults) do not persist on save/load.</li>
+<li>Town Alert Mode UI doesn’t persist on save/load, even though town remains in Alert Mode.</li>
+<ul>

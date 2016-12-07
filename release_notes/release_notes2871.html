@@ -1,0 +1,186 @@
+<h1>Stonehearth Alpha 15: Faster, Better, Stronger</h1>
+ 
+Here are the fixes for this release: 
+
+<ul>
+<li>Fix for farmers not replanting after harvesting</li>
+<li>Fix for full storage containers not being reconsidered when an item is taken out, which means the containers are never refilled after item is taken out. </li>
+<li>Get rid of free-standing columns when in xray mode.</li>
+<li>Fix bug where furniture could not be placed on upper levels of in-progress buildings. </li>
+<li>Fix hitching when starting and stopping the follow path mover consecutively. Also enable path visualization when chasing entities. </li>
+<li>Fix for a edge case where crop's harvestable flag was off from growing component's growth stage, making the crop appear harvestable but it actually was not </li>
+<li>Prevent path finder renderer from generating a lot of garbage every time it updates the path. Fixes a huge memory leak when debug paths are turned on.</li>
+<li>Fix wait encounters (e.g. crypt spawn necromancer) being triggered again in a loaded game.</li>
+<li>Backwards compatibility for wall roofs. </li>
+<li>Roofs walls now do not fill holes in floors.</li>
+<li>Destroy orphaned bait traps</li>
+<li>Fix get_contiguous_regions bug.</li>
+<li>Speed up camp placement by 10x </li>
+<li>Fix inventory-related save/load issues</li>
+<li>Improved logging for AI issues</li>
+<li>Added resource counts to template screen and building summary screen</li>
+</ul>
+
+<h2>develop_2867</h2>
+
+<ul>
+<li>People no longer get stuck while running across modified terrain</li>
+<li>Tweaks to crafter workshop UI</li>
+<li>Fix for herbalist getting stuck in a bad state on load</li>
+<li>Prevent town alert mode from getting stuck when the button is pressed repeatedly</li>
+<li>Display folder name in save view as a tooltip. Helps users find the right save </li>
+<li>Make sure beds and chairs are available to others when they are no longer in use</li>
+<li>When AI gets stuck on a certain action, add logging to help diagnose problem</li>
+<li>Make sure recovering and sleeping buff are no longer persisted past time</li>
+<li>When  you load a game from an existing game, the time controls now work properly</li>
+<li>You can now start/stop AI logging using the entity inspector in debugtools</li>
+<li>Clicking on town button repeatedly no longer throws a set on destroy error</li>
+<li>Footmen now drop carrying when starting a patrol action, so their backpacks will not be full of stuff nobody else can get to</li>
+<li>Various fixes for building dependency calculations</li>
+<li>You can now build columns close to other columns and slabs</li>
+<li>Performance improvements to "grow walls" code</li>
+<li>Tweak inventory of Iskender Traders</li>
+<li>Better update mechanism for encounters</li>
+<li>Add two new music tracks to the game</li>
+<li>Farmers now find new farming-related tasks in a more sane fashion</li>
+<li>Goblin raiders now go away after 2 in game days, so they don't sit around forever if they can't find a path to your town</li>
+<li>Shepherded animals are less likely to wander outside pastures</li>
+<li>Monsters that should be leashed to an area are now more likely to stay in that area</li>
+<li>Collection quest now works properly on save/load</li>
+<li>Camera can now path further</li>
+<li>Growing walls around holes in the floor no longer results in extra walls</li>
+<li>Crafter signs are now made by their respective crafters, using a plain wooden sign from the carpenter</li>
+</ul>
+
+<h2>develop-2865</h2>
+
+<ul>
+<li>Enemy placement code bails correctly when there is no good location for enemy</li>
+<li>Various building dependency fixes</li>
+<li>Goblin chieftain no longer asks for partial logs</li>
+<li>Significant performance related building fixes</li>
+<li>Fixes to scaffolding location </li>
+<li>Crafter queue max is now 30</li>
+<li>Cooks should farm</li>
+<li>Traders no longer sell or offer giant bone axe</li>
+<li>Fix bug where people are stuck in ground briefly on load</li>
+<li>Workers will no longer restock logs in lit firepits</li>
+<li>People can no longer walk over firepits</li>
+<li>Fix issue assigning tasks to hearthlings</li>
+<li>Hitting cancel combat action twice no longer wedges footman AI </li>
+<li>Add stacks to non-food crops</li>
+<li>Farming is now higher priority than placing items</li>
+<li>Tweaks to growing speeds</li>
+<li>Improve performance in combat</li>
+<li>Shop's gold will update properly even when game is paused</li>
+<li>You can now inspect a hearthling's AI via debugtools even when the game is puased</li>
+<li>Make sign recipe descriptions consistent</li>
+<li>Add clay tunnel door</li>
+<li>Footmen now have the correct tasks when loaded with job unchecked in Hearthling Therapist</li>
+</ul>
+
+<h2>develop-2860</h2>
+
+Welcome to the preview for Stonehearth Alpha 15. This release is all about better performance! We have made literally hundreds of under-the-hood improvements, both large and small, to give you a game that runs more smoothly, lags less, has fewer bugs, and is just all-around snappier than ever before. 
+
+<ul>
+<li>Overall hearthling and settlement performance</li>
+<li>Building upgrades (with more improvements coming in future alphas)</li>
+<li>Inventory management</li>
+<li>Gameplay</li>
+</ul>
+
+All these taken together provide a game that’s faster, better, and more fun to play.
+Remember, this is a Steam unstable branch release; that means that though performance is improved, some things may not perform exactly as expected. They're called bugs. Please report them in our forums at discourse.stonehearth.net.
+
+Here’s what’s new and notable in this release:
+
+<h2>Moar performance? Moar hearthlings!</h2>
+Territory and settlement management is much improved in Alpha 15. From enhanced pathfinding to better crafting to smarter enemy encounter placement, this release will allow you to build a bigger and better village than ever before, and run it smoothly.
+
+<ul>
+<li>Increase max citizens to 50 in Gameplay settings menu (default setting remains at 20).</li>
+<li>Better support for larger settlements.</li>
+<li>Further progress on idle hearthlings.</li>
+<li>Optimize navgrid/sensor performance.</li>
+<li>Overhaul the encounter placement code so that it properly respects the player’s territory and avoids placing encounters in tunnels and water.</li>
+<li>Speed up camp placement 3-4x.</li>
+<li>New citizens avoid arriving in hostile areas.</li>
+<li>Move finding animals to the new placement code.</li>
+
+<li>Farmageddon! Numerous farming improvements including: ensure that farmers keep harvesting a farm as long as as they can find another crop nearby to harvest. This fixes some ping-ponging issues and odd harvesting behavior.</li>
+<li>Make it so if you have lost hearthlings past the initial 7, the net worth requirement for the next day will be lower.</li>
+<li>Fix bugs in hydrology code that could result in sucking up huge amounts of memory or CPU.</li>
+<li>Speed up physics code.</li>
+<li>Fix engine error when loading a game that was saved in xray mode.</li>
+<li>Add option in settings to show hearthling paths.</li>
+<li>Make sure enemies that are killed are removed from other populations’ global vision. Helps combat music not get stuck after killing all the enemies.</li>
+</ul>
+
+
+<h2>Building a better hearthling tomorrow.</h2>
+Alpha 15 boasts numerous foundational improvements (a little building humor there) to design and construction. You know those multi-story buildings you tried to get your hearthlings to build? Now they will! Well, probably. This is, after all, only Part One of significant upgrades to building, to be continued in Alpha 16 and beyond. Still, in this release, you’ll be able to tackle more sophisticated structures that build more quickly. 
+
+<ul>
+<li>Split flooring by wall tops, so that dependencies are much more spatially correct.</li>
+<li>If a floor isn't dependent on anything or supported by anything, look around or above for dependents.</li>
+<li>Provide support ladders for pieces of scaffolding that lack standability in their adjacent regions.</li>
+<li>Dig many foundations instead of one MASSIVE one; this improves performance significantly.</li>
+<li>Split really really big floors; see above.</li>
+<li>Simplify and generalize ladder height computation.</li>
+<li>Make sure we update the roof profile when computing its layout (and clipping existing building structures).</li>
+<li>Misc building micro-optimizations.</li>
+<li>Scaffolding now respects hearthling height.</li>
+<li>Better, more consistent scaffolding merging and re-use.</li>
+<li>Scaffolding can wait for a structure to complete before being placed on it.</li>
+<li>Fix not building scaffolding for overhanging roofs.</li>
+<li>Rebuild the templates with new floor tech.</li>
+<li>Fix some logging issues with building.</li>
+</ul>
+
+<h2> We’re gonna clean up this town. </h2>
+Let’s face it: your hearthlings are hoarders. They tend to amass lots and lots of stuff. And all that food, and raw materials, and crafted items, and loot can put a crimp in having a village run smoothly. TL;DR: too much stuff interferes with performance. That’s addressed in Alpha 15. There’s now an inventory cap (based on how many hearthlings a village has) -- so now you need to think more carefully about what items you really need, and not just grab whole lot of wood and stone. (Plus, we’ll be adding gameplay elements around inventory in future releases.) Remember, a tidy village is a happy village.
+
+<ul>
+<li>Have inventory capacity be based on the max number of citizens you've ever reached, tunable per population.</li>
+<li>Add an inventory item count to the bottom of the inventory tab in town overview.</li>
+<li>Add a red warning if town inventory is full. Do not add items to town inventory if it is full.</li>
+<li>Show a bulletin when your town inventory is full.</li>
+<li>Bug fix for killing crafters and demoting crafters. Ingredients should end up on the floor.</li>
+<li>Add event in inventory for when entity container has changed to help diagnose missing inventory items.</li>
+<li>Create a crafter storage object for each crafter's backpack. This allows the inventory to know that even if the crafter inventory's object goes out of world, it is still in a storage.</li>
+<li>Add warning for when an item becomes no longer in the inventory.</li>
+<li>Micro-optimization to make restocking faster.</li>
+</ul>
+
+<h2>Let’s play.</h2>
+Even with all the attention on performance, we haven’t forgotten to tune the gameplay and content aspects of Stonehearth. You’ll find a ton of tweaks, bug fixes, and new stuff for your playing pleasure.
+<ul>
+<li>More carpenter-crafted signs for various classes.</li>
+<li>Add 4 wide stone door and recipe.</li>
+<li>Fix bug that caused units to get stuck in doors.</li>
+<li>Add a food shop to Rayya's Children that sells cooking ingredients and animal feed.</li>
+<li>Add sheep jerky and herbs to food cart. because why not?</li>
+<li>Make flour and cornmeal both be buyable.</li>
+<li>Reduce combat leash range for wolf pack, so they don't get too far apart and hard to find. Reduce varanus HP a bit.</li>
+<li>Make varanus skin buyable so RC can make courage potions.</li>
+<li>Make necromancer crypt create a loot chest after it is destroyed, so items will not fall from the sky and all land at the same location.</li>
+<li>Make sure town alert buffs aren't persistent.</li>
+<li>Make sure goblins don't ask for gold chests in shakedown.</li>
+<li>Fix for people not always equipping the best thing if their job changes.</li>
+<li>Put equipment back into your inventory after it is unequipped.</li>
+<li>Fix for things getting stuck on ladders again.</li>
+<li>Allow shop's rarity to be specified in json files and filter out items whose rarity does not match anything in the shop rarity table.</li>
+<li>Add 'earth' resource category to stockpile filters. Remove 'clay' material tag from clay bricks. Fixes potter using clay bricks to make clay bricks.</li>
+<li>Fix mason and blacksmith not mining.</li>
+<li>Fix for harvest crop adjacent not handling rotten crops correctly.</li>
+<li>Visual updates for building templates.</li>
+<li>Added unique SFX for all of the brazier torches.</li>
+<li>New sfx for some enemies.</li>
+<li>Fix up some color inconsistencies in hair.</li>
+<li>Add support for manually unlockable crafter recipes.</li>
+<li>Patrolling buff should not be persistent.</li>
+<li>Fix the collision shapes for the picket fence gate and cobblestone fence gate.</li>
+<li>Fix starving buff staying on hearthlings even when they are not hungry.</li>
+<li>Add can_start checks to simple caravan and returning trader encounters so they only appear if player can do a fair trade (has enough/few enough items).</li>
+</ul>

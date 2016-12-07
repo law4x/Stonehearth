@@ -1,0 +1,140 @@
+ <h2>Welcome to Stonehearth Alpha 14!</h2>
+The theme of Alpha 14 is the evolution of enemy encounters and combat (Part One… to be continued in future releases). You’ll find several new features related to this, as well as continued performance improvements and bug fixes.
+ 
+This is an Alpha release, so you may encounter monsters of a different kind -- that is to say, bugs. Please report them in our forums at discourse.stonehearth.net.
+ 
+Here’s what’s new and notable in this release:
+<h2>Bug Fixes</h2>
+<ul>
+<li>Fix for crashes related to trying to find a location outside of town.</li>
+<li>Fix for crafter queue disappearing</li>
+<li>Limit crafting queue to 25 orders max</li>
+</ul>
+
+<br/>
+
+<h2>Release-519</h2>
+
+<h2>Moar Monsters!</h2>
+You didn’t think we were going to stop at goblins and undead, did you?
+<ul>
+<li>Several new enemies and enemy encounter types, both raids and ambient appearances (enemies spawn and lie in wait for unsuspecting hearthlings).</li>
+<li>Encounters increase in difficulty over time.</li>
+<li>An encounter spawns randomly in each twelve hour period.</li>
+</ul>
+ 
+<h2>New Class: The Herbalist</h2>
+Moar enemies? Moar hurt! Your herbalist makes house calls.
+<ul>
+<li>Hearthlings injured in combat now heal much, much more slowly without intervention, and their rate of healing is dependent on their willpower stat.</li>
+<li>Once injured, a hearthling’s health status (heart icon) will become visually persistent until healed.</li>
+<li>The Herbalist can heal injured hearthlings quickly.</li>
+<li>The Herbalist can craft a number of healing items.</li>
+<li>The Herbalist can craft strength and stamina tonics.</li>
+<li>The Herbalist’s talisman, a healing staff, is crafted by the Carpenter. It is also available for purchase from a new game’s start screen.</li>
+<li>Wounded hearthlings will seek out beds. The Herbalist can only treat hearthlings who are in beds.</li>
+<li>Wounded and untreated hearthlings will decrease a settlement’s happiness.</li>
+<li>Wounded hearthlings will move more slowly.</li>
+</ul>
+ 
+<h2>New Combat Party Controls</h2>
+Move. Attack. Defend. I’m talking to you, soldier.
+<ul>
+<li>Only Footmen can now be placed in combat parties.</li>
+<li>Hearthlings who are not Footmen may be enrolled in the Militia; see below.</li>
+<li>You may have up to four combat parties; you can manage each separately from the “Fight and Defend” menu.</li>
+<li>Parties have three modes from which you can select: Move, Attack, and Defend.</li>
+<li>”Move” directs the party to proceed to a specific location, ignoring intervening threats.</li>
+<li>”Attack” directs the party to attack a specific enemy or location, while engaging anything hostile on their way.</li>
+<li>”Defend” directs the party to move towards and then remain at a specific location, engaging anything hostile on its way. The party will remain at the Defense location until otherwise directed.</li>
+</ul>
+ 
+<h2>New Town Defense Options - and a Well-regulated Militia.</h2>
+Your settlement now has a new way to manage non-combatants in times of crisis. Also, you now have a militia!
+<ul>
+<li>Safety Standards, crafted by the Carpenter or the Potter, can be placed anywhere in your world to create a “safety point” for non-combatant hearthlings. Camp standards are safety points by default.</li>
+<li>Selecting “Town Alert Mode” (formerly Defense Mode) will cause all hearthlings not in the militia to run to their nearest safety point.</li>
+<li>To assist with town defense, non-Footmen hearthlings may be enrolled in the Militia.</li>
+<li>Hearthlings in the Militia will hold their position attack anything hostile that approaches them. They are less likely flee from enemies than their non-militia counterparts and also receive a slight boost in damage.</li>
+<li>By default, all hearthlings are opted out of the militia. You can add people to the milita via the “Groups” page, accessed through the tab at the bottom of the Hearthling Therapist interface.</li>
+</ul>
+
+<h2>Hats and Helms!</h2>
+Moar Monsters? Moar Armor! This release finally implements a new schema for hair that allows for hats and helmets. Some classes come with hats by default, and others can get helmets from advanced crafting recipes. For modders, this release also includes a new way to define the colors of things from json palettes, allowing more variation in hearthling hair colors, skin tones and more. 
+ 
+<h2>Major Bug Fixes, Improvements, and other Features</h2>
+<ul>
+
+<h3>Performance</h3>
+
+<li>Numerous performance improvements, including a further reduction in idle hearthling behavior and support for larger settlements</li>
+<li>Identified and fixed some memory leaks</li>
+<li>Destroy unnecessary traces, to improve performance and memory usage</li>
+<li>Fixed lua and coroutine related memory leaks in the game's AI</li>
+<li>Performances improvements in crafters</li>
+<li>Performance optimizations for towns with lots of placed items</li>
+<li>Performance optimizations for compound actions</li>
+<li>Performance enhancements to building, fix some memory leaks</li>
+<li>Continued work on destroying defunct encounter nodes, for performance and debug UI readability</li>
+<li>Performance improvements for farms</li>
+<li>Fix various memory leaks in UI, especially listeners, views, and tooltips</li>
+<li>Fixed combat music not turning off</li>
+<li>Fixed a lot of UI slowness due to information oversharing from server</li>
+
+<h3> Combat and Encounters</h3>
+
+<li>Combat tuning: health regen rate, encounter frequency, menace, loot drops, equipment stats</li>
+<li>You should get a notification the first time you engage with enemies from an encounter </li>
+<li>Combat music stuttering and continuous play is eliminated</li>
+<li>Combat music should only start when combat is joined</li>
+<li>Sound effects for new monsters</li>
+<li>SFX for Goblins and Golems and other monsters</li>
+<li>People no longer allowed to attack objects that have no hit points</li>
+<li>Added healing items</li>
+<li>All doors now properly keep out enemies</li>
+<li>Party banners now work correctly with older saves</li>
+<li>Cancel order command now available on combat banners</li>
+<li>Cancel order command now available on party and footman unit frames</li>
+<li>Fixed issues where goblin chief is not accepting tribute</li>
+<li>Players can no longer move the goblin firepit</li>
+<li>Goblins are now neutral to everyone during goblin chief camp encounter</li>
+<li>Tweaks to armor stats</li>
+<li>Party banners now reflect the party that they belong to, and toasts show the command</li>
+<li>Parties in the UI are disabled until you have a footman</li>
+
+<h3>Crafting, Building, and Other Hearthling Activities</h3>
+
+<li>Made restocking much faster</li>
+<li>Farmers no longer place only plants</li>
+<li>Expanded pathfinding range for hearthlings to 1,000 voxels from 512, hearthlings can now find items that are further away from themselves!</li>
+<li>Bronze recipes added to blacksmith</li>
+<li>New gold is added to existing gold chests, instead of spawning new chests, until existing chests are full</li>
+<li>Lots more hair color variations and permutations for hearthlings</li> 
+<li>Show count of citizens and party members on start menu</li>
+<li>Allow layers in hearthling clothing, allow each layer to reveal the layers underneath.</li>
+
+<h3>Other Stuff</h3>
+
+<li>NPCs will own their stockpile items</li>
+<li>Ambient threats and trader campaigns have been reset in order make new encounter changes work on old saves. If you've loaded an older A14 save and not seeing traders, check your notifications!</li>
+<li>All tonics can now be placed/moved about in the world so you can put them in crates and get them back out</li>
+<li>All plants (but not trees) can now be uprooted and relocated.</li>
+<li>All plants (but not trees) regrow after harvest.</li>
+<li>Castle roofs are now included in the building editor.</li>
+<li>Wooden Tunnel Doors can now be crafted by the Carpenter.</li>
+<li>Livestock now remain in their pastures.</li>
+<li>Tweaks to Rayya’s Children, including selected outfits and journal entries.</li>
+<li>Modders can now add custom encounter types.</li>
+<li>Task groups and hearthling therapist now saves/loads properly</li>
+<li>Food now disappears if it is half eaten; should solve food littering issues</li>
+<li>Normalized lots and lots of net worth/prices</li>
+<li>Increase clay drops in desert</li>
+<li>Rotten food is now a separate thing, so you can delete it. All rotten baskets of food will become a generic rotten basket of mush</li>
+</ul>
+
+<h2>A Reminder</h2>
+<p>
+The default setting for the maximum number of hearthlings is 20. This is for performance reasons. However, if your game is running well at 20 hearthlings, you are free to change this setting if you wish. Just go to Settings>Gameplay to adjust. Currently, the maximum setting is 40. 
+
+Once your game hits the maximum number of hearthlings, you will no longer receive Daily Notifications.
+</p>

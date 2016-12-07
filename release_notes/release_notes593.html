@@ -1,0 +1,170 @@
+
+<h2>Current Release</h2>
+<h3>Bug Fixes</h3>
+<ul>
+<li>Fixed bug where a combat party could split into multiple patrol parties.</li>
+<li>Fixed holes and duplicate positions in patrol formations.</li>
+<li>Fixed a bug where pausing a building would stall building progress; unpausing now works.</li>
+<li>Fixed a variety of building and scaffolding correctness issues. More buildings should now build successfully!</li>
+</ul>
+
+<h2>Release-584</h2>
+<h2>Alpha 17: Building a Bigger and Better Stonehearth!</h2>
+
+Welcome to Stonehearth Alpha 17! This release is all about empowering your hearthlings to build more awesome settlements. To do this, we’re introducing the ability for your town to level up, we’re giving you a new class to help create settlement awesomeness, and we’ve made tons of upgrades to the building system itself.
+</br>
+</br>
+We should note that Alpha 17 is merely Part One of improving the building experience. We’ll be continuing this effort, with both content and functionality, in Alpha 18.
+</br>
+</br>
+Let’s take a closer look at what’s in this release.
+
+<h2>Blood, Sweat, and Tiers</h2>
+<em>Get on my level.</em>
+
+Your hearthlings have labored mightily to carve an impressive settlement out of the wilderness. They are the envy of their map tile. And yet, they are asking themselves, “Is that all there is?” To which we can now say, “Absolutely not.”
+</br>
+</br>
+A few days after your hearthlings settle in their new home, you will receive a quest from a royal herald. Create one of three city monuments to commemorate your town's particular strengths and skills, and your settlement will qualify for "Township Status" which will elevate your hearthling-ville to a new tier of impressiveness.
+</br>
+</br>
+Attaining this new tier unlocks advanced building templates, launches upgraded and enhanced stores, and introduces a new tier of background music! This quest is currently available only for the Ascendancy, other kingdom upgrades to come in future Alphas. What mysteries -- and challenges -- could higher tiers hold for our hearthlings? (Cue foreshadowing music…)
+
+<h2>In Stonehearth, all our engineers are civil.</h2>
+<em>It’s a trap!</em>
+
+Want to make a more awesome city? You’ll need an Engineer! Good thing we’re introducing just that in this Alpha. Engineers provide a whole new dimension to your town’s capabilities.
+</br>
+</br>
+Promoted from a Level One Blacksmith (with the help of a Wrench, crafted by a Level Four Blacksmith), the Engineer creates advanced contraptions and defensive weaponry.
+</br>
+</br>
+Initially, he can craft two types of ranged weapons and two traps. The Turret and Turnip Shooter (!) will target and fire at enemies; they are limited in the number you can place in your town, based on the level and number of engineers in town. Turrets have a limited lifespan (their ammo depletes after a certain number of uses), but can be repaired by your Engineer.
+</br>
+</br>
+Traps can be set off once and will stun enemies who stumble across them; they deal burst damage, and you can place more of them in your town than the turrets. In the beginning, Engineers can place 4 traps and 2 turrets; this allowance increases as your Engineer levels up.
+</br>
+</br>
+In future, Engineers will create more epic craftables, but for now the only decorations they can fashion are an iron door and signpost. We will continue to add recipes in future Alphas. 
+
+<h2>Build castles in the sky. Well, almost.</h2>
+<em>Build, or build not. There is no try.</em>
+
+We’ve streamlined and updated the building system. Now building functions more smoothly; you should be able to design -- and your hearthlings will complete! -- buildings that previously remained unbuilt. This includes scaffolding being removed completely following a structure’s completion.
+</br>
+</br>
+We’ve added some messaging to the building process; among other things, commissioning a building will also automatically set your crafters to work producing the needed items for your new structure. And (drum roll) -- beds can now be “owned” by individual hearthlings! 
+</br>
+</br>
+Also: STAIRS!!! Yes, we have added a stairs tool to make your multi-story constructions even more awesome.
+</br>
+</br>
+The system is not perfect -- not everything may work -- but we think you’ll find it a huge leap forward. Please let us know how it works for you and alert us of problematic templates and saves on our forum at discourse.stonehearth.net.
+</br>
+</br>
+Building improvements include (but are not limited to):
+
+<ul>
+<li>When building is complete, display a congratulatory message instead of an empty materials needed box. Do not display the build “Pause” button when building is complete.</li>
+<li>Fix issue with breaking up large floors that lead to unbuildable buildings.</li>
+<li>First step in building template UI update. Default building templates and custom templates are displayed under different tabs in the Building Editor UI. Kingdom-specific templates are listed separately.</li>
+<li>Bed ownership! Beds can now be assigned to individual hearthlings.</li>
+<li>Added stairs tool to Building Editor</li>
+<li>A huge number of scaffolding fixes and improvements! Scaffolding now understands when its structure has completed. Fix a bug with shared scaffolding. Don't place scaffolding in places that will be blocked. And more...</li>
+<li>Have town keep track of buildings that are stuck because their materials do not exist in the world.</li>
+<li>Correctly merge walls with nearby buildings.</li>
+<li> When the “Build” command is given, find all the fixtures needed for the building and add items needed to the relevant crafter queues.  Add gameplay setting to enable or disable building auto queue; default is on.</li>
+<li>Disable remove and edit buttons when a building has started construction</li>
+<li>New ahead-of-time scaffolding system: Hearthlings now think hard about scaffolding before they start building, resulting in fewer unbuildable structures.  Will not work for buildings that are already in-progress.</li>
+<li>You can now change colors of already placed floor, foundation, and roads in Building Editor</li>
+<li>Added Ctrl+z as a hotkey for Undo in the Building Editor</li>
+<li>Erase tool has been moved to under the Undo tool in Building Editor</li>
+<li>Better implementation of finding another block to teardown. Teardown will now be faster and hearthlings will drop resources at their feet instead of putting it back into storage while tearing down</li>
+</ul>
+
+We’ve also made refinements in other important areas. We’re continuing to polish and improve combat and party behavior, especially around the placing and removal of defense banners. Plus, combat parties now patrol together in formation! Additionally, pathfinding can now handle large numbers of destinations without bogging down the CPU.
+</br>
+</br>
+As with all new Alpha releases, we’ve also added literally hundreds of changes, additions, fixes, and the like. 
+
+<h2>Tons of Fixes, Improvements, and Other Goodies</h2>
+
+<li>Remove Iron Coif completely from the game. It has been replaced by Iron Helmet</li>
+<li>Prohibit ranged combat from ladders. Really unfair when melee units can't counterattack</li>
+<li>Added SFX for Single Target Heals from the Cleric; changed the Cleric "channeling" a heal SFX as well</li>
+<li>Engineer turrets and traps are now automatically replaced when they are used up or killed</li>
+<li>Updated Engineer outfit design</li>
+<li>Added new fanfare jingle for city Tier Two level up</li>
+<li>Add an animation to Mountain's windchime (windchimes from imported Alpha 16 saves may -- or may not -- work correctly)</li>
+<li>Increase spawning frequency of shops</li>
+<li>When a combat command is issued we now cancel the previous command permanently, instead of having a temporary override of individual commands over party commands</li>
+<li>Added a way for modders to specify that a certain part of a mixinto will override an entire node. Usage example -- "mixintype_given_names": "override" . This allows us to replace arrays instead of adding to them</li>
+<li>Added Varanus ambient mobs so Varanus skins will be available even in late game</li>
+<li>Added SFX for mountain wind chimes!</li>
+<li>Merge some un- or infrequently used stockpile filters -- refined animal part and heavy armor. Refined animal part was only leather bolts, which is now rolled under the cloth section. Heavy Armor and Light armor are merged into one section</li>
+<li>Add fountain splash effects for the tier 2 statues</li>
+<li>Players who have mods installed will have an (M) added to the end of their version string (to help us better diagnose potential issues)</li>
+<li>Added pen scratching SFX for the select game story UI screen at start of screen</li>
+<li>Fix stockpile filters for a bunch of items</li>
+<li>Allow mining zones to merge vertically. Makes carving stairs out of terrain much easier</li>
+<li>Label all the two handed weapons as such in their descriptions</li>
+<li>Wrench animations and SFX for working at engineering workbench</li>
+<li>Updated turnip shooter model and animations</li>
+<li>Updating Cleric VFX for Single Target Heal and Healing Aura</li>
+<li>Updated Engineer clamp trap model</li>
+<li>Engineer's Iron Clad Door is now lockable</li>
+<li>Combat parties now patrol together in formation</li>
+<li>Added new herbalist tonic. Temporarily gives citizens a speed boost and makes them less sleepy</li>
+<li>Military strength is now shown in the town overview</li>
+<li>Increase number of users for turnip shooter</li>
+<li>Traps apply slowing debuffs upon damaging an enemy</li>
+<li>Increase amount of turrets placeable by an engineer</li>
+<li>Increase trap and turret damage</li>
+<li>Added SFX for Small_Turret and adjusted sounds for Turnip_Shooter </li>
+<li>Increase generator delay for orc campaign camp raids</li>
+<li>Give Bluebell the Sheep a unique outfit. Bluebell will now only be tameable after the Goblin Chieftain is killed</li>
+<li>Make poyo and sheep run slightly faster</li>
+<li>Nerf blacksmith requirement to become an engineer (level 1)</li>
+<li>Reduced critter trap recipe ingredient requirements</li>
+<li>Allow players to set a config to always have gridlines on</li>
+<li>Updated fountain iconics</li>
+<li>Updated various engineer assets - adding spec to several, added base to engineer turret, added iconics</li>
+<li>Make repairing doors loop until the entity is fully repaired</li>
+<li>Show number of items placed on item's (iconic and root) unit frame if the item has placement limitations </li>
+<li>For modders: Added way to specify default list of observers on observers component instead of needing to make an empty AI pack</li>
+<li>Herbalists also get a diligence buff so they don't need much sleep while tending to people's wounds</li>
+<li>Decrease materials needed for Tier 2 city fountains</li>
+<li>Warn the player if they have both an smod and a flat folder for the same mod</li>
+<li>Nerf cleric healing exp, but allow all combat units to get a small amount of exp for patrolling</li>
+<li>Make starving hearthlings always eat food while sitting on the ground. Prevents hearthlings dying because they're trying to grab a chair</li>
+<li>Hearthlings will now prefer to sleep in an unowned bed over a bed already owned by another hearthling. This discourages hearthlings without their own beds sleeping in other's beds</li>
+<li>Have engineer refill/fix traps and turrets instead of having the weapons destroy themselves when they run out of uses</li>
+<li>Farmer crops now have level restrictions</li>
+<li>Added Rayya's Children watermelon crop</li>
+<li>Add names for building brushes patterns so they mention the names of the voxel colors that are used in said patterns</li>
+<li>Make pets despawn after a day if you decided to release them </li>
+<li>Separate ladder building into common task category versus building category. This way we don't have hearthlings that have build unchecked constantly trying to help build scaffolding</li>
+<li>Updating engineer class icon to match new wrench</li>
+<li>Make hard mode encounters generate slightly slower</li>
+<li>Add some gold trim to the female upgraded worker outfit so that the portrait for the worker will look different from the normal outfit </li>
+<li>Throw rugs are now in the decoration category</li>
+<li>Added plants and trophies categories to the Decorations tab in building editor</li>
+<li>Fixed traps turning towards monsters when attacking</li>
+<li>Pause the game while auto saving because there can be problems if the game is simulating while saving</li>
+<li>Fix bug where herald comes back multiple times if you save/load the game in the middle of the quest</li>
+<li>Fix one bug causing hearthling never becoming hungry</li>
+<li>Make shepherds only go out and get one animal at a time for new pastures. Prevents shepherds constantly moving slowly because they have a large herd of animals following them</li>
+<li>Fix bug in player territory where buildings being designed would not mark territory after performing a save/load</li>
+<li>Fix bug where clerics were trying to walk off to patrol in the middle of combat</li>
+<li>Make level 0 knights have a single target taunt ability that keeps them high on the aggro table. Fix not having aggro override passed into battery context for single target attacks</li>
+<li>Fix bug where defense zones blocked zoning of farms and pastures </li>
+<li>Fix up new game menus to always display centered for large display monitors</li>
+<li>Performance tweaks for combat</li>
+<li>Reduce memory footprint of roads</li>
+<li>Fix for tombstone hover tooltips showing up with bad loc strings in the town inventory UI</li>
+</ul>
+
+
+
+
+
