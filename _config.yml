@@ -1,0 +1,8 @@
+title: Stoneherth.cn
+description: 石炉中文社区
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-cayman
+
+gems:
+  - jekyll-mentions
